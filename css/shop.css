@@ -473,7 +473,10 @@ body.menu-open .side-menu {
     display: flex;
     align-items: flex-end;
     padding: 150px 8% 90px;
-    background: url(/IMAGES/cakes/cake\ image\ 3.jpg);
+    background:
+        linear-gradient(180deg,
+            rgba(11, 10, 13, 0.55),
+            #0b0a0d);
     overflow: hidden;
 }
 
