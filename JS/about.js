@@ -84,12 +84,5 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
 
-    const cartButton = document.querySelector(".cart-button");
-
-    cartButton?.addEventListener("click", () => {
-
-        alert("Your shopping cart will be available soon.");
-
-    });
 
 });

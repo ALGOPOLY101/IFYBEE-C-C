@@ -36,7 +36,7 @@
 
         <i class="fa-solid fa-bag-shopping" aria-hidden="true"></i>
 
-      </button>
+      <span class="cart-count" hidden>0</span></button>
 
 
       <button class="menu-button" type="button" aria-label="Open navigation menu" aria-expanded="false"
@@ -57,49 +57,29 @@
 
 
   <aside class="side-menu" id="site-menu" aria-hidden="true">
-
     <div class="side-menu-header">
-
-      <span>IFYBEE'S</span>
-
+      <div>
+        <span class="menu-small-title">IFYBEE'S</span>
+        <span class="menu-title">MENU</span>
+      </div>
       <button class="close-menu" type="button" aria-label="Close navigation menu">
-
         <i class="fa-solid fa-xmark" aria-hidden="true"></i>
-
       </button>
-
     </div>
-
-
     <nav class="side-menu-links" aria-label="Main navigation">
-
-      <a href="index.html">Home</a>
-
       <a href="shop.html">Shop</a>
-
       <a href="customcakes.html">Custom Cakes</a>
-
+      <a href="academy.html" class="active" aria-current="page">Academy</a>
       <a href="events.html">Events</a>
-
       <a href="gallery.html">Gallery</a>
-
       <a href="about.html">About</a>
-
     </nav>
-
-
     <div class="side-menu-footer">
-
-      <p>
-        Ready to learn something new?
-      </p>
-
-      <a href="#join" class="menu-order-button">
-        Join the Academy
+      <p>Something beautiful is waiting for you.</p>
+      <a href="academy.html#join" class="menu-order-button">Order Something Special
+        <i class="fa-solid fa-arrow-right"></i>
       </a>
-
     </div>
-
   </aside>
 
 
@@ -1410,9 +1390,20 @@
 
   </footer>
 
+  <div id="cart-overlay" class="cart-overlay" aria-hidden="true"></div>
+  <aside id="cart" class="cart" aria-hidden="true" aria-label="Shopping cart">
+    <div class="cart-header">
+      <div><span class="cart-kicker">IFYBEE'S</span><h2>Your Cart</h2></div>
+      <button id="close-cart" type="button" aria-label="Close shopping cart"><i class="fa-solid fa-xmark" aria-hidden="true"></i></button>
+    </div>
+    <div id="cart-list" class="cart-list" aria-live="polite"></div>
+    <div class="cart-footer"><h3>Total: <span id="cart-total">₦0</span></h3><button class="checkout-button" type="button">Checkout</button></div>
+  </aside>
+
 
   <script src="JS/academy.js"></script>
 
+    <script src="JS/cart.js"></script>
 </body>
 
 </html>

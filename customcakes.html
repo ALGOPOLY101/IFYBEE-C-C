@@ -26,7 +26,7 @@
 
             <button class="cart-button" aria-label="Shopping cart">
                 <i class="fa-solid fa-bag-shopping"></i>
-            </button>
+            <span class="cart-count" hidden>0</span></button>
 
             <button class="menu-button" aria-label="Open menu" aria-expanded="false">
                 <i class="fa-solid fa-bars"></i>
@@ -38,39 +38,30 @@
 
     <div class="menu-overlay"></div>
 
-    <aside class="side-menu">
-
+    <aside class="side-menu" id="site-menu" aria-hidden="true">
         <div class="side-menu-header">
-
-            <p>IFYBEE'S</p>
-
-            <button class="close-menu" aria-label="Close menu">
-                <i class="fa-solid fa-xmark"></i>
+            <div>
+                <span class="menu-small-title">IFYBEE'S</span>
+                <span class="menu-title">MENU</span>
+            </div>
+            <button class="close-menu" type="button" aria-label="Close navigation menu">
+                <i class="fa-solid fa-xmark" aria-hidden="true"></i>
             </button>
-
         </div>
-
-        <nav class="side-menu-links">
-
-            <a href="index.html">Home</a>
+        <nav class="side-menu-links" aria-label="Main navigation">
             <a href="shop.html">Shop</a>
+            <a href="customcakes.html" class="active" aria-current="page">Custom Cakes</a>
             <a href="academy.html">Academy</a>
             <a href="events.html">Events</a>
             <a href="gallery.html">Gallery</a>
             <a href="about.html">About</a>
-
         </nav>
-
         <div class="side-menu-footer">
-
-            <p>Something special is waiting.</p>
-
-            <a href="#custom-request" class="menu-order-button">
-                Create Your Cake
+            <p>Something beautiful is waiting for you.</p>
+            <a href="customcakes.html#custom-request" class="menu-order-button">Order Something Special
+                <i class="fa-solid fa-arrow-right"></i>
             </a>
-
         </div>
-
     </aside>
 
     <main>
@@ -907,9 +898,20 @@
 
     </footer>
 
+    <div id="cart-overlay" class="cart-overlay" aria-hidden="true"></div>
+    <aside id="cart" class="cart" aria-hidden="true" aria-label="Shopping cart">
+        <div class="cart-header">
+            <div><span class="cart-kicker">IFYBEE'S</span><h2>Your Cart</h2></div>
+            <button id="close-cart" type="button" aria-label="Close shopping cart"><i class="fa-solid fa-xmark" aria-hidden="true"></i></button>
+        </div>
+        <div id="cart-list" class="cart-list" aria-live="polite"></div>
+        <div class="cart-footer"><h3>Total: <span id="cart-total">₦0</span></h3><button class="checkout-button" type="button">Checkout</button></div>
+    </aside>
+
 
     <script src="JS/customcakes.js"></script>
 
+    <script src="JS/cart.js"></script>
 </body>
 
 </html>

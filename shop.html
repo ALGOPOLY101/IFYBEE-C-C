@@ -23,65 +23,44 @@
         <a href="index.html" class="logo">
             <img src="IMAGES/ifybeeslogo.jpg" alt="Ifybee's Cakes & Confectionery">
         </a>
-        <button class="theme-toggle" type="button" aria-pressed="false" aria-label="Change to light mode"
-            data-tooltip="Change to light mode" title="Change to light mode">
-
-            <i class="fa-solid fa-moon theme-moon" aria-hidden="true">
-            </i>
-
-            <i class="fa-solid fa-sun theme-sun" aria-hidden="true">
-            </i>
-
-        </button>
         <button class="cart-button" aria-label="Shopping cart">
             <i class="fa-solid fa-bag-shopping"></i>
             <span class="cart-count">0</span>
         </button>
 
-        <button class="menu-button" aria-label="Open menu">
+        <button class="menu-button" aria-label="Open menu" aria-expanded="false">
             <i class="fa-solid fa-bars"></i>
         </button>
-
-        </div>
 
     </header>
 
 
     <div class="menu-overlay"></div>
 
-    <aside class="side-menu">
-
+    <aside class="side-menu" id="site-menu" aria-hidden="true">
         <div class="side-menu-header">
-
-            <p>IFYBEE'S</p>
-
-            <button class="close-menu" aria-label="Close menu">
-                <i class="fa-solid fa-xmark"></i>
+            <div>
+                <span class="menu-small-title">IFYBEE'S</span>
+                <span class="menu-title">MENU</span>
+            </div>
+            <button class="close-menu" type="button" aria-label="Close navigation menu">
+                <i class="fa-solid fa-xmark" aria-hidden="true"></i>
             </button>
-
         </div>
-
-        <nav class="side-menu-links">
-
-            <a href="index.html">Home</a>
+        <nav class="side-menu-links" aria-label="Main navigation">
+            <a href="shop.html" class="active" aria-current="page">Shop</a>
             <a href="customcakes.html">Custom Cakes</a>
             <a href="academy.html">Academy</a>
             <a href="events.html">Events</a>
             <a href="gallery.html">Gallery</a>
             <a href="about.html">About</a>
-
         </nav>
-
         <div class="side-menu-footer">
-
-            <p>Something special is waiting.</p>
-
-            <a href="#" class="menu-order-button">
-                Order Now
+            <p>Something beautiful is waiting for you.</p>
+            <a href="shop.html" class="menu-order-button">Order Something Special
+                <i class="fa-solid fa-arrow-right"></i>
             </a>
-
         </div>
-
     </aside>
 
 
@@ -198,8 +177,8 @@
                         </h3>
 
                         <p class="product-description">
-                            A beautiful cake designed for
-                            memorable celebrations.
+                            A carefully decorated celebration cake with a soft,
+                            sweet finish, created for birthdays and memorable occasions.
                         </p>
 
                         <div class="product-bottom">
@@ -244,8 +223,8 @@
                         </h3>
 
                         <p class="product-description">
-                            Elegant and delicious for birthdays,
-                            anniversaries and special moments.
+                            A classic celebration cake with an elegant presentation
+                            and a tender crumb, suitable for birthdays and anniversaries.
                         </p>
 
                         <div class="product-bottom">
@@ -293,8 +272,8 @@
                         </h3>
 
                         <p class="product-description">
-                            Golden, freshly baked pastry filled
-                            with a delicious savoury filling.
+                            Golden pastry filled with a savoury meat mixture,
+                            freshly baked for a satisfying snack or light treat.
                         </p>
 
                         <div class="product-bottom">
@@ -339,8 +318,8 @@
                         </h3>
 
                         <p class="product-description">
-                            A selection of freshly baked treats
-                            perfect for sharing.
+                            A varied selection of freshly baked pastry treats,
+                            prepared for sharing at home, gatherings or casual moments.
                         </p>
 
                         <div class="product-bottom">
@@ -389,8 +368,8 @@
                         </h3>
 
                         <p class="product-description">
-                            One of our special creations,
-                            perfect for something different.
+                            A distinctive sweet creation with an artistic presentation,
+                            made for customers looking for something special.
                         </p>
 
                         <div class="product-bottom">
@@ -436,8 +415,8 @@
                         </h3>
 
                         <p class="product-description">
-                            A creative sweet creation made
-                            for special occasions.
+                            A signature sweet creation with a polished finish,
+                            suitable for celebrations and thoughtful gifting.
                         </p>
 
                         <div class="product-bottom">
@@ -627,8 +606,19 @@
 
     </footer>
 
+    <div id="cart-overlay" class="cart-overlay" aria-hidden="true"></div>
+    <aside id="cart" class="cart" aria-hidden="true" aria-label="Shopping cart">
+        <div class="cart-header">
+            <div><span class="cart-kicker">IFYBEE'S</span><h2>Your Cart</h2></div>
+            <button id="close-cart" type="button" aria-label="Close shopping cart"><i class="fa-solid fa-xmark" aria-hidden="true"></i></button>
+        </div>
+        <div id="cart-list" class="cart-list" aria-live="polite"></div>
+        <div class="cart-footer"><h3>Total: <span id="cart-total">₦0</span></h3><button class="checkout-button" type="button">Checkout</button></div>
+    </aside>
+
 
     <script src="JS/shop.js"></script>
+    <script src="JS/cart.js"></script>
 
 
 </body>
