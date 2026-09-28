@@ -3,84 +3,210 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="description" content="Create a custom cake with Ifybee's Cakes & Confectionery.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Custom Cakes | Ifybee's Cakes & Confectionery</title>
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <link rel="stylesheet" href="css/customcakes.css">
-    <link rel="stylesheet" href="css/responsiveness.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <link rel="stylesheet" href="CSS/customcakes.css">
+
+    <link rel="stylesheet" href="CSS/responsiveness.css">
 </head>
 
 <body>
 
-    <header class="navbar">
+    <!-- HEADER -->
+
+    <header class="site-header">
 
         <a href="index.html" class="logo">
-            <img src="IMAGES/ifybeeslogo.jpg" alt="Ifybee's Cakes & Confectionery">
+            <img
+                src="IMAGES/ifybeeslogo.jpg"
+                alt="Ifybee's Cakes & Confectionery">
         </a>
 
-        <div class="nav-actions">
 
-            <button class="cart-button" aria-label="Shopping cart">
+        <div class="header-actions">
+
+            <button class="cart-btn" aria-label="Open shopping cart">
                 <i class="fa-solid fa-bag-shopping"></i>
-            <span class="cart-count" hidden>0</span></button>
 
-            <button class="menu-button" aria-label="Open menu" aria-expanded="false">
-                <i class="fa-solid fa-bars"></i>
+                <span class="cart-count">0</span>
+            </button>
+
+
+            <button class="menu-btn" aria-label="Open menu">
+                <span></span>
+                <span></span>
+                <span></span>
             </button>
 
         </div>
 
     </header>
 
+
+    <!-- SIDE MENU -->
+
     <div class="menu-overlay"></div>
 
-    <aside class="side-menu" id="site-menu" aria-hidden="true">
-        <div class="side-menu-header">
-            <div>
-                <span class="menu-small-title">IFYBEE'S</span>
-                <span class="menu-title">MENU</span>
-            </div>
-            <button class="close-menu" type="button" aria-label="Close navigation menu">
-                <i class="fa-solid fa-xmark" aria-hidden="true"></i>
-            </button>
+    <aside class="side-menu">
+
+        <div class="menu-logo">
+
+            <img
+                src="IMAGES/ifybeeslogo.jpg"
+                alt="Ifybee's Cakes & Confectionery">
+
         </div>
-        <nav class="side-menu-links" aria-label="Main navigation">
-            <a href="shop.html">Shop</a>
-            <a href="customcakes.html" class="active" aria-current="page">Custom Cakes</a>
-            <a href="academy.html">Academy</a>
-            <a href="events.html">Events</a>
-            <a href="gallery.html">Gallery</a>
-            <a href="about.html">About</a>
-        </nav>
-        <div class="side-menu-footer">
-            <p>Something beautiful is waiting for you.</p>
-            <a href="customcakes.html#custom-request" class="menu-order-button">Order Something Special
+
+
+        <p class="menu-label">
+            EXPLORE IFYBEE'S
+        </p>
+
+
+        <nav class="menu-links">
+
+            <a href="index.html">
+                Home
                 <i class="fa-solid fa-arrow-right"></i>
             </a>
+
+            <a href="shop.html">
+                Shop
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+            <a href="customcakes.html" class="active">
+                Custom Cakes
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+            <a href="academy.html">
+                Academy
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+            <a href="events.html">
+                Events
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+            <a href="gallery.html">
+                Gallery
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+            <a href="about.html">
+                About
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+        </nav>
+
+
+        <div class="menu-footer">
+
+            <p>
+                Something beautiful is waiting for you.
+            </p>
+
+            <a href="shop.html" class="menu-order">
+                Order Something Special
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
         </div>
+
     </aside>
+
+
+    <!-- CART -->
+
+    <div class="cart-overlay"></div>
+
+    <aside class="cart">
+
+        <div class="cart-header">
+
+            <div>
+                <p>IFYBEE'S</p>
+                <h2>Your Cart</h2>
+            </div>
+
+            <button class="cart-close" aria-label="Close cart">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+        </div>
+
+
+        <div class="cart-items">
+
+            <p class="empty-cart">
+                Your cart is empty.
+            </p>
+
+        </div>
+
+
+        <div class="cart-bottom">
+
+            <div class="cart-total">
+
+                <span>Total</span>
+
+                <strong class="cart-total-price">
+                    ₦0
+                </strong>
+
+            </div>
+
+
+            <a href="shop.html" class="cart-shop-button">
+                Continue Shopping
+            </a>
+
+        </div>
+
+    </aside>
+
 
     <main>
 
+        <!-- HERO -->
+
         <section class="custom-hero">
 
-            <div class="custom-hero-image">
+            <div class="hero-image">
 
-                <img src="IMAGES/cakes/cake image 3.jpg" alt="Custom cake created by Ifybee's">
+                <img
+                    src="IMAGES/cakes/cake image 3.jpg"
+                    alt="Custom cake by Ifybee's">
+
+                <div class="hero-shade"></div>
 
             </div>
 
-            <div class="custom-hero-overlay"></div>
 
-            <div class="shine-effect"></div>
+            <div class="hero-content">
 
-            <div class="custom-hero-content reveal-item">
-
-                <p class="section-label">MADE JUST FOR YOU</p>
+                <p class="eyebrow">
+                    MADE JUST FOR YOU
+                </p>
 
                 <h1>
                     Your idea.
@@ -88,504 +214,119 @@
                 </h1>
 
                 <p>
-                    Tell us what you're imagining and let Ifybee's
-                    transform your idea into something unforgettable.
+                    From elegant celebrations to completely unique
+                    designs, tell us what you envision and let
+                    Ifybee's bring it to life.
                 </p>
 
-                <div class="hero-buttons">
 
-                    <a href="#custom-request" class="btn btn-primary">
-                        Create Your Cake
-                    </a>
+                <a href="#cake-form" class="hero-button">
+                    Start Your Design
+                    <i class="fa-solid fa-arrow-down"></i>
+                </a>
 
-                    <a href="#inspiration" class="btn btn-secondary">
-                        View Inspiration
-                    </a>
+            </div>
 
-                </div>
+
+            <div class="hero-badge">
+
+                <span>IFYBEE'S</span>
+
+                <strong>
+                    CUSTOM
+                </strong>
+
+                <small>
+                    CAKES
+                </small>
 
             </div>
 
         </section>
 
 
-        <section class="custom-introduction">
+        <!-- CUSTOM CAKE INFORMATION -->
 
-            <div class="custom-introduction-content reveal-item">
+        <section class="custom-intro">
 
-                <p class="section-label">THE IFYBEE'S EXPERIENCE</p>
+            <div class="section-heading">
 
-                <h2>
-                    More than a cake.
-                    <span>A creation made for you.</span>
-                </h2>
-
-                <p>
-                    Every celebration is different. Your cake should be too.
-                    Whether you have a complete design in mind or only a rough
-                    idea, our custom cake experience gives you the freedom to
-                    create something that feels uniquely yours.
+                <p class="eyebrow">
+                    YOUR VISION
                 </p>
-
-            </div>
-
-            <div class="custom-introduction-image reveal-item">
-
-                <div class="image-shine">
-
-                    <img src="IMAGES/slide/background cake.jpg" alt="Ifybee's custom cake creation">
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <section class="occasion-section">
-
-            <div class="section-heading reveal-item">
-
-                <p class="section-label">MADE FOR EVERY MOMENT</p>
-
-                <h2>
-                    Whatever you're
-                    <span>celebrating.</span>
-                </h2>
-
-                <p>
-                    From intimate celebrations to unforgettable events,
-                    create a cake that belongs to the moment.
-                </p>
-
-            </div>
-
-            <div class="occasion-grid">
-
-                <article class="occasion-card reveal-item">
-
-                    <div class="occasion-image">
-
-                        <img src="IMAGES/cakes/cake image 3.jpg" alt="Birthday cake">
-
-                        <div class="shine-effect"></div>
-
-                    </div>
-
-                    <div class="occasion-content">
-
-                        <i class="fa-solid fa-cake-candles"></i>
-
-                        <h3>Birthdays</h3>
-
-                        <p>
-                            Celebrate another year with a cake designed
-                            around the person being celebrated.
-                        </p>
-
-                    </div>
-
-                </article>
-
-
-                <article class="occasion-card reveal-item">
-
-                    <div class="occasion-image">
-
-                        <img src="IMAGES/slide/background cake.jpg" alt="Wedding cake">
-
-                        <div class="shine-effect"></div>
-
-                    </div>
-
-                    <div class="occasion-content">
-
-                        <i class="fa-solid fa-heart"></i>
-
-                        <h3>Weddings</h3>
-
-                        <p>
-                            Elegant creations designed to become part
-                            of your special day.
-                        </p>
-
-                    </div>
-
-                </article>
-
-
-                <article class="occasion-card reveal-item">
-
-                    <div class="occasion-image">
-
-                        <img src="IMAGES/pastries/meatpie.webp" alt="Celebration pastries">
-
-                        <div class="shine-effect"></div>
-
-                    </div>
-
-                    <div class="occasion-content">
-
-                        <i class="fa-solid fa-champagne-glasses"></i>
-
-                        <h3>Celebrations</h3>
-
-                        <p>
-                            Graduations, anniversaries, milestones and
-                            everything worth remembering.
-                        </p>
-
-                    </div>
-
-                </article>
-
-
-                <article class="occasion-card reveal-item">
-
-                    <div class="occasion-image">
-
-                        <img src="IMAGES/cakes/cake image 3.jpg" alt="Special event cake">
-
-                        <div class="shine-effect"></div>
-
-                    </div>
-
-                    <div class="occasion-content">
-
-                        <i class="fa-solid fa-star"></i>
-
-                        <h3>Something Unique</h3>
-
-                        <p>
-                            Have an idea that doesn't fit a category?
-                            Let's create something completely different.
-                        </p>
-
-                    </div>
-
-                </article>
-
-            </div>
-
-        </section>
-
-
-        <section class="process-section">
-
-            <div class="section-heading centered reveal-item">
-
-                <p class="section-label">HOW IT WORKS</p>
-
-                <h2>
-                    From idea
-                    <span>to creation.</span>
-                </h2>
-
-            </div>
-
-            <div class="process-grid">
-
-                <article class="process-card reveal-item">
-
-                    <div class="process-number">01</div>
-
-                    <i class="fa-solid fa-lightbulb"></i>
-
-                    <h3>Share Your Idea</h3>
-
-                    <p>
-                        Tell us about your occasion, preferred style,
-                        colours, flavours and anything else you have in mind.
-                    </p>
-
-                </article>
-
-
-                <article class="process-card reveal-item">
-
-                    <div class="process-number">02</div>
-
-                    <i class="fa-solid fa-wand-magic-sparkles"></i>
-
-                    <h3>We Create</h3>
-
-                    <p>
-                        Our team turns your concept into a cake design
-                        tailored around your celebration.
-                    </p>
-
-                </article>
-
-
-                <article class="process-card reveal-item">
-
-                    <div class="process-number">03</div>
-
-                    <i class="fa-solid fa-cake-candles"></i>
-
-                    <h3>We Bake</h3>
-
-                    <p>
-                        Your approved concept becomes a carefully crafted
-                        cake ready for your special moment.
-                    </p>
-
-                </article>
-
-
-                <article class="process-card reveal-item">
-
-                    <div class="process-number">04</div>
-
-                    <i class="fa-solid fa-heart"></i>
-
-                    <h3>You Celebrate</h3>
-
-                    <p>
-                        Your finished creation becomes part of a memory
-                        worth keeping.
-                    </p>
-
-                </article>
-
-            </div>
-
-        </section>
-
-
-        <section class="inspiration-section" id="inspiration">
-
-            <div class="section-heading reveal-item">
-
-                <p class="section-label">GET INSPIRED</p>
-
-                <h2>
-                    Bring us
-                    <span>your vision.</span>
-                </h2>
-
-                <p>
-                    Found a design you love? Use our gallery as inspiration,
-                    or bring your own reference when making your request.
-                </p>
-
-            </div>
-
-            <div class="inspiration-grid">
-
-                <div class="inspiration-large reveal-item">
-
-                    <div class="image-shine">
-
-                        <img src="IMAGES/cakes/cake image 3.jpg" alt="Ifybee's cake inspiration">
-
-                    </div>
-
-                </div>
-
-                <div class="inspiration-small reveal-item">
-
-                    <div class="image-shine">
-
-                        <img src="IMAGES/slide/background cake.jpg" alt="Ifybee's cake inspiration">
-
-                    </div>
-
-                </div>
-
-                <div class="inspiration-small reveal-item">
-
-                    <div class="image-shine">
-
-                        <img src="IMAGES/pastries/meatpie.webp" alt="Ifybee's pastry inspiration">
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <section class="design-options">
-
-            <div class="design-options-image reveal-item">
-
-                <div class="image-shine">
-
-                    <img src="IMAGES/cakes/cake image 3.jpg" alt="Custom cake design">
-
-                </div>
-
-            </div>
-
-            <div class="design-options-content reveal-item">
-
-                <p class="section-label">MAKE IT YOURS</p>
 
                 <h2>
                     Designed around
-                    <span>your imagination.</span>
+                    <span>you.</span>
                 </h2>
 
                 <p>
-                    Your custom cake can be shaped around the details that
-                    matter to you.
-                </p>
-
-                <div class="options-list">
-
-                    <div class="option-item">
-
-                        <span>
-                            <i class="fa-solid fa-palette"></i>
-                        </span>
-
-                        <div>
-                            <h3>Colours & Style</h3>
-                            <p>Choose a colour palette and visual direction.</p>
-                        </div>
-
-                    </div>
-
-
-                    <div class="option-item">
-
-                        <span>
-                            <i class="fa-solid fa-cookie-bite"></i>
-                        </span>
-
-                        <div>
-                            <h3>Flavours</h3>
-                            <p>Choose the flavours that suit your celebration.</p>
-                        </div>
-
-                    </div>
-
-
-                    <div class="option-item">
-
-                        <span>
-                            <i class="fa-solid fa-layer-group"></i>
-                        </span>
-
-                        <div>
-                            <h3>Size & Style</h3>
-                            <p>Shape the cake around your guests and occasion.</p>
-                        </div>
-
-                    </div>
-
-
-                    <div class="option-item">
-
-                        <span>
-                            <i class="fa-solid fa-image"></i>
-                        </span>
-
-                        <div>
-                            <h3>Reference Designs</h3>
-                            <p>Bring inspiration and ideas you want us to explore.</p>
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <section class="video-section reveal-item">
-
-            <div class="video-background">
-
-                    <img src="IMAGES/cakes/cake image 3.jpg" alt="Ifybee's cake creation">
-
-                <div class="video-overlay"></div>
-
-                <div class="shine-effect"></div>
-
-            </div>
-
-            <div class="video-content">
-
-                <p class="section-label">THE CRAFT</p>
-
-                <h2>
-                    Watch the
-                    <span>magic happen.</span>
-                </h2>
-
-                <button class="video-play" aria-label="Play custom cake video">
-
-                    <i class="fa-solid fa-play"></i>
-
-                </button>
-
-                <p>
-                    A space for a future Ifybee's cake-making video.
+                    Every celebration is different. Whether you already
+                    have a complete design in mind or just an idea,
+                    you can tell us what you want and we will work
+                    around your vision.
                 </p>
 
             </div>
 
-        </section>
 
+            <div class="custom-features">
 
-        <section class="why-section">
+                <article class="feature-card">
 
-            <div class="section-heading centered reveal-item">
+                    <div class="feature-icon">
+                        <i class="fa-solid fa-wand-magic-sparkles"></i>
+                    </div>
 
-                <p class="section-label">WHY IFYBEE'S</p>
+                    <span>01</span>
 
-                <h2>
-                    Made with
-                    <span>intention.</span>
-                </h2>
-
-            </div>
-
-            <div class="why-grid">
-
-                <article class="why-card reveal-item">
-
-                    <i class="fa-solid fa-wand-magic-sparkles"></i>
-
-                    <h3>Creative Designs</h3>
+                    <h3>
+                        Unique Designs
+                    </h3>
 
                     <p>
-                        Your cake is designed to reflect your celebration
-                        rather than simply coming from a standard template.
+                        Create something personal instead of choosing
+                        from a standard cake design.
                     </p>
 
                 </article>
 
 
-                <article class="why-card reveal-item">
+                <article class="feature-card featured">
 
-                    <i class="fa-solid fa-hand-holding-heart"></i>
+                    <div class="feature-icon">
+                        <i class="fa-solid fa-image"></i>
+                    </div>
 
-                    <h3>Made With Care</h3>
+                    <span>02</span>
+
+                    <h3>
+                        Bring Inspiration
+                    </h3>
 
                     <p>
-                        Every creation is approached with attention to
-                        the details that make it special.
+                        Have a picture or design you love?
+                        Use it to help communicate your idea.
                     </p>
 
                 </article>
 
 
-                <article class="why-card reveal-item">
+                <article class="feature-card">
 
-                    <i class="fa-solid fa-star"></i>
+                    <div class="feature-icon">
+                        <i class="fa-solid fa-cake-candles"></i>
+                    </div>
 
-                    <h3>Made To Remember</h3>
+                    <span>03</span>
+
+                    <h3>
+                        Any Occasion
+                    </h3>
 
                     <p>
-                        We aim to create something that looks as memorable
-                        as the occasion itself.
+                        Birthdays, weddings, anniversaries,
+                        graduations and everything worth celebrating.
                     </p>
 
                 </article>
@@ -595,323 +336,570 @@
         </section>
 
 
-        <section class="custom-request" id="custom-request">
+        <!-- CUSTOM CAKE FORM -->
 
-            <div class="request-content reveal-item">
+        <section class="cake-order" id="cake-form">
 
-                <p class="section-label">START YOUR CREATION</p>
+            <div class="form-heading">
+
+                <p class="eyebrow">
+                    LET'S CREATE
+                </p>
 
                 <h2>
-                    Have an idea?
-                    <span>Let's make it real.</span>
+                    Tell us about
+                    <span>your cake.</span>
                 </h2>
 
                 <p>
-                    Tell us a little about what you're looking for.
-                    More detailed ordering and image-upload functionality
-                    can be connected to the backend later.
+                    Fill in the details below. This helps us understand
+                    what you have in mind before discussing your order.
                 </p>
 
             </div>
 
-            <form class="custom-form reveal-item">
 
-                <div class="form-row">
+            <form id="customCakeForm">
 
-                    <div class="form-group">
+                <div class="form-section">
 
-                        <label for="customer-name">Your Name</label>
+                    <div class="form-title">
 
-                        <input type="text" id="customer-name" name="customer-name" placeholder="Enter your name">
+                        <span>01</span>
+
+                        <div>
+                            <h3>Your Details</h3>
+                            <p>How can we reach you?</p>
+                        </div>
 
                     </div>
 
-                    <div class="form-group">
 
-                        <label for="customer-email">Email</label>
+                    <div class="form-grid">
 
-                        <input type="email" id="customer-email" name="customer-email" placeholder="Enter your email">
+                        <div class="input-group">
+
+                            <label for="name">
+                                Full Name
+                            </label>
+
+                            <input
+                                type="text"
+                                id="name"
+                                placeholder="Your name"
+                                required>
+
+                        </div>
+
+
+                        <div class="input-group">
+
+                            <label for="phone">
+                                Phone Number
+                            </label>
+
+                            <input
+                                type="tel"
+                                id="phone"
+                                placeholder="080..."
+                                required>
+
+                        </div>
+
+
+                        <div class="input-group">
+
+                            <label for="email">
+                                Email Address
+                            </label>
+
+                            <input
+                                type="email"
+                                id="email"
+                                placeholder="you@example.com">
+
+                        </div>
+
+
+                        <div class="input-group">
+
+                            <label for="occasion">
+                                Occasion
+                            </label>
+
+                            <select id="occasion" required>
+
+                                <option value="">
+                                    Select an occasion
+                                </option>
+
+                                <option value="Birthday">
+                                    Birthday
+                                </option>
+
+                                <option value="Wedding">
+                                    Wedding
+                                </option>
+
+                                <option value="Anniversary">
+                                    Anniversary
+                                </option>
+
+                                <option value="Graduation">
+                                    Graduation
+                                </option>
+
+                                <option value="Baby Shower">
+                                    Baby Shower
+                                </option>
+
+                                <option value="Other">
+                                    Other
+                                </option>
+
+                            </select>
+
+                        </div>
 
                     </div>
 
                 </div>
 
 
-                <div class="form-row">
+                <div class="form-section">
 
-                    <div class="form-group">
+                    <div class="form-title">
 
-                        <label for="occasion">Occasion</label>
+                        <span>02</span>
 
-                        <select id="occasion" name="occasion">
-
-                            <option value="">Select an occasion</option>
-                            <option value="birthday">Birthday</option>
-                            <option value="wedding">Wedding</option>
-                            <option value="graduation">Graduation</option>
-                            <option value="anniversary">Anniversary</option>
-                            <option value="event">Event</option>
-                            <option value="other">Other</option>
-
-                        </select>
+                        <div>
+                            <h3>Design Your Cake</h3>
+                            <p>Give us an idea of what you want.</p>
+                        </div>
 
                     </div>
 
-                    <div class="form-group">
 
-                        <label for="cake-size">Cake Size</label>
+                    <div class="form-grid">
 
-                        <select id="cake-size" name="cake-size">
+                        <div class="input-group">
 
-                            <option value="">Select a size</option>
-                            <option value="small">Small</option>
-                            <option value="medium">Medium</option>
-                            <option value="large">Large</option>
-                            <option value="custom">Not sure yet</option>
+                            <label for="cakeType">
+                                Cake Type
+                            </label>
 
-                        </select>
+                            <select id="cakeType" required>
+
+                                <option value="">
+                                    Select cake type
+                                </option>
+
+                                <option value="Buttercream Cake">
+                                    Buttercream Cake
+                                </option>
+
+                                <option value="Fondant Cake">
+                                    Fondant Cake
+                                </option>
+
+                                <option value="Red Velvet Cake">
+                                    Red Velvet Cake
+                                </option>
+
+                                <option value="Chocolate Cake">
+                                    Chocolate Cake
+                                </option>
+
+                                <option value="Vanilla Cake">
+                                    Vanilla Cake
+                                </option>
+
+                                <option value="Custom">
+                                    Not Sure / Custom
+
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <div class="input-group">
+
+                            <label for="size">
+                                Cake Size
+                            </label>
+
+                            <select id="size" required>
+
+                                <option value="">
+                                    Select size
+                                </option>
+
+                                <option value="Small">
+                                    Small
+                                </option>
+
+                                <option value="Medium">
+                                    Medium
+                                </option>
+
+                                <option value="Large">
+                                    Large
+                                </option>
+
+                                <option value="Not Sure">
+                                    Not Sure Yet
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <div class="input-group">
+
+                            <label for="date">
+                                Preferred Date
+                            </label>
+
+                            <input
+                                type="date"
+                                id="date"
+                                required>
+
+                        </div>
+
+
+                        <div class="input-group">
+
+                            <label for="budget">
+                                Estimated Budget
+                            </label>
+
+                            <select id="budget">
+
+                                <option value="">
+                                    Select a range
+                                </option>
+
+                                <option value="₦20,000 - ₦30,000">
+                                    ₦20,000 - ₦30,000
+                                </option>
+
+                                <option value="₦30,000 - ₦50,000">
+                                    ₦30,000 - ₦50,000
+                                </option>
+
+                                <option value="₦50,000 - ₦80,000">
+                                    ₦50,000 - ₦80,000
+                                </option>
+
+                                <option value="₦80,000+">
+                                    ₦80,000+
+                                </option>
+
+                                <option value="Not Sure">
+                                    Not Sure Yet
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="input-group full">
+
+                        <label for="message">
+                            Tell Us About Your Design
+                        </label>
+
+                        <textarea
+                            id="message"
+                            rows="6"
+                            placeholder="Colours, theme, flavour, decorations, inscription, number of tiers or anything else you have in mind..."
+                            required></textarea>
 
                     </div>
 
                 </div>
 
 
-                <div class="form-group">
+                <div class="form-section">
 
-                    <label for="cake-details">Tell us about your cake</label>
+                    <div class="form-title">
 
-                    <textarea id="cake-details" name="cake-details" rows="6"
-                        placeholder="Describe your idea, preferred colours, flavours, theme or anything else you'd like us to know..."></textarea>
+                        <span>03</span>
 
-                </div>
+                        <div>
+                            <h3>Inspiration</h3>
+                            <p>Have a design reference?</p>
+                        </div>
+
+                    </div>
 
 
-                <div class="form-group">
+                    <label class="upload-box" for="inspiration">
 
-                    <label for="reference-image">
-                        Reference Image
+                        <div class="upload-icon">
+                            <i class="fa-solid fa-cloud-arrow-up"></i>
+                        </div>
+
+                        <strong>
+                            Upload a cake inspiration image
+                        </strong>
+
+                        <span>
+                            PNG, JPG or JPEG
+                        </span>
+
+                        <input
+                            type="file"
+                            id="inspiration"
+                            accept="image/png, image/jpeg">
+
                     </label>
 
-                    <div class="file-upload">
 
-                        <input type="file" id="reference-image" name="reference-image" accept="image/*">
-
-                        <i class="fa-solid fa-cloud-arrow-up"></i>
-
-                        <span>Choose an image for inspiration</span>
-
+                    <div
+                        class="image-preview"
+                        id="imagePreview">
                     </div>
-
-                    <small>
-                        Image uploading will be connected to the backend later.
-                    </small>
 
                 </div>
 
 
-                <button type="submit" class="btn btn-primary form-submit">
-                    Send Cake Request
-                    <i class="fa-solid fa-arrow-right"></i>
-                </button>
+                <div class="form-submit">
 
-                <p class="form-message"></p>
+                    <button
+                        type="submit"
+                        class="submit-button">
+
+                        Prepare My Enquiry
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </button>
+
+                    <p>
+                        Your enquiry will be prepared for WhatsApp.
+                    </p>
+
+                </div>
 
             </form>
 
+
+            <div class="form-success" id="formSuccess">
+
+                <div class="success-icon">
+                    <i class="fa-solid fa-check"></i>
+                </div>
+
+                <h3>
+                    Your cake details are ready.
+                </h3>
+
+                <p>
+                    Your enquiry has been prepared. Continue to WhatsApp
+                    to send the details to Ifybee's.
+                </p>
+
+                <a
+                    href="#"
+                    id="whatsappLink"
+                    target="_blank"
+                    class="whatsapp-button">
+
+                    <i class="fa-brands fa-whatsapp"></i>
+
+                    Send on WhatsApp
+
+                </a>
+
+                <button
+                    type="button"
+                    id="editEnquiry"
+                    class="edit-button">
+
+                    Edit Enquiry
+
+                </button>
+
+            </div>
+
         </section>
 
 
-        <section class="faq-section">
+        <!-- INSPIRATION CTA -->
 
-            <div class="section-heading centered reveal-item">
+        <section class="inspiration">
 
-                <p class="section-label">QUESTIONS</p>
+            <div class="inspiration-image">
+
+                <img
+                    src="IMAGES/slide/background cake.jpg"
+                    alt="Ifybee's cake creation">
+
+            </div>
+
+
+            <div class="inspiration-content">
+
+                <p class="eyebrow">
+                    NEED SOME IDEAS?
+                </p>
 
                 <h2>
-                    Before you
-                    <span>order.</span>
+                    Let the gallery
+                    <span>inspire you.</span>
                 </h2>
 
-            </div>
+                <p>
+                    Browse some of Ifybee's creations and find
+                    inspiration for your own custom cake.
+                </p>
 
-            <div class="faq-container">
-
-                <div class="faq-item reveal-item">
-
-                    <button class="faq-question">
-
-                        <span>Can I bring my own cake design?</span>
-
-                        <i class="fa-solid fa-plus"></i>
-
-                    </button>
-
-                    <div class="faq-answer">
-
-                        <p>
-                            Yes. You can use your own design or reference
-                            images as inspiration for your custom cake.
-                        </p>
-
-                    </div>
-
-                </div>
-
-
-                <div class="faq-item reveal-item">
-
-                    <button class="faq-question">
-
-                        <span>Can I request a completely unique design?</span>
-
-                        <i class="fa-solid fa-plus"></i>
-
-                    </button>
-
-                    <div class="faq-answer">
-
-                        <p>
-                            Custom creations can be discussed based on your
-                            preferred concept, occasion and requirements.
-                        </p>
-
-                    </div>
-
-                </div>
-
-
-                <div class="faq-item reveal-item">
-
-                    <button class="faq-question">
-
-                        <span>Can I choose the flavour?</span>
-
-                        <i class="fa-solid fa-plus"></i>
-
-                    </button>
-
-                    <div class="faq-answer">
-
-                        <p>
-                            Flavour options can be selected when discussing
-                            your custom cake request.
-                        </p>
-
-                    </div>
-
-                </div>
-
-
-                <div class="faq-item reveal-item">
-
-                    <button class="faq-question">
-
-                        <span>How do I place a custom cake request?</span>
-
-                        <i class="fa-solid fa-plus"></i>
-
-                    </button>
-
-                    <div class="faq-answer">
-
-                        <p>
-                            Use the request form on this page. The full
-                            ordering and payment process will be connected
-                            when the website backend is developed.
-                        </p>
-
-                    </div>
-
-                </div>
+                <a href="gallery.html" class="gallery-button">
+                    Explore Gallery
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
 
             </div>
-
-        </section>
-
-
-        <section class="final-cta reveal-item">
-
-            <div class="shine-effect"></div>
-
-            <p class="section-label">YOUR NEXT CELEBRATION</p>
-
-            <h2>
-                Make it
-                <span>unforgettable.</span>
-            </h2>
-
-            <p>
-                Your idea could be the next beautiful creation from Ifybee's.
-            </p>
-
-            <a href="#custom-request" class="btn btn-primary">
-                Start Your Request
-            </a>
 
         </section>
 
     </main>
 
 
-    <footer class="footer">
+    <!-- FOOTER -->
 
-        <div class="footer-brand">
+    <footer class="site-footer">
 
-            <img src="IMAGES/ifybeeslogo.jpg" alt="Ifybee's Cakes & Confectionery">
+        <div class="footer-main">
+
+            <div class="footer-brand">
+
+                <a href="index.html" class="footer-logo">
+
+                    <img
+                        src="IMAGES/ifybeeslogo.jpg"
+                        alt="Ifybee's Cakes & Confectionery">
+
+                </a>
+
+                <p>
+                    Beautiful cakes, delicious pastries and memorable
+                    experiences, crafted for every occasion.
+                </p>
+
+
+                <div class="footer-socials">
+
+                    <a href="#" aria-label="Instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+
+                    <a href="#" aria-label="Facebook">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+
+                    <a href="#" aria-label="TikTok">
+                        <i class="fa-brands fa-tiktok"></i>
+                    </a>
+
+                    <a
+                        href="https://wa.me/2340000000000"
+                        aria-label="WhatsApp">
+
+                        <i class="fa-brands fa-whatsapp"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>Explore</h3>
+
+                <a href="index.html">Home</a>
+
+                <a href="shop.html">Shop</a>
+
+                <a href="customcakes.html">Custom Cakes</a>
+
+                <a href="gallery.html">Gallery</a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>Services</h3>
+
+                <a href="academy.html">Academy</a>
+
+                <a href="events.html">Events</a>
+
+                <a href="events.html">Catering</a>
+
+                <a href="customcakes.html">Special Orders</a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>Contact</h3>
+
+                <a href="about.html">Contact Us</a>
+
+                <a href="https://wa.me/2340000000000">
+                    WhatsApp
+                </a>
+
+                <a href="#">Instagram</a>
+
+                <a href="about.html">About Ifybee's</a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
 
             <p>
-                Cakes, pastries, creativity and unforgettable experiences.
+                © 2026 Ifybee's Cakes & Confectionery.
+                All rights reserved.
             </p>
 
-        </div>
+            <div>
 
-        <div class="footer-links">
+                <a href="#">
+                    Privacy Policy
+                </a>
 
-            <a href="index.html">Home</a>
-            <a href="shop.html">Shop</a>
-            <a href="academy.html">Academy</a>
-            <a href="events.html">Events</a>
-            <a href="gallery.html">Gallery</a>
-            <a href="about.html">About</a>
+                <a href="#">
+                    Terms & Conditions
+                </a>
 
-        </div>
-
-        <div class="footer-socials">
-
-            <a href="#" aria-label="Instagram">
-                <i class="fa-brands fa-instagram"></i>
-            </a>
-
-            <a href="#" aria-label="Facebook">
-                <i class="fa-brands fa-facebook-f"></i>
-            </a>
-
-            <a href="#" aria-label="TikTok">
-                <i class="fa-brands fa-tiktok"></i>
-            </a>
+            </div>
 
         </div>
-
-        <p class="footer-copy">
-            © 2026 Ifybee's Cakes & Confectionery. All rights reserved.
-        </p>
 
     </footer>
 
-    <div id="cart-overlay" class="cart-overlay" aria-hidden="true"></div>
-    <aside id="cart" class="cart" aria-hidden="true" aria-label="Shopping cart">
-        <div class="cart-header">
-            <div><span class="cart-kicker">IFYBEE'S</span><h2>Your Cart</h2></div>
-            <button id="close-cart" type="button" aria-label="Close shopping cart"><i class="fa-solid fa-xmark" aria-hidden="true"></i></button>
-        </div>
-        <div id="cart-list" class="cart-list" aria-live="polite"></div>
-        <div class="cart-footer"><h3>Total: <span id="cart-total">₦0</span></h3><button class="checkout-button" type="button">Checkout</button></div>
-    </aside>
 
+    <script src="JS/cart.js"></script>
 
     <script src="JS/customcakes.js"></script>
 
-    <script src="JS/cart.js"></script>
 </body>
 
 </html>

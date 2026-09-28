@@ -2,182 +2,460 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="description" content="Shop cakes, pastries and special creations from Ifybee's Cakes & Confectionery.">
+    <meta name="description"
+        content="Shop cakes, pastries and sweet creations from Ifybee's Cakes & Confectionery.">
 
     <title>Shop | Ifybee's Cakes & Confectionery</title>
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
-    <link rel="stylesheet" href="css/shop.css">
-    <link rel="stylesheet" href="css/responsiveness.css">
+    <link rel="stylesheet"
+        href="CSS/Shop.css">
+
+    <link rel="stylesheet"
+        href="CSS/responsiveness.css">
+
 </head>
+
 
 <body>
 
-    <header class="navbar">
+
+    <!-- HEADER -->
+
+    <header class="header">
+
+        <button class="menu-btn"
+            type="button"
+            aria-label="Open menu">
+
+            <i class="fa-solid fa-bars"></i>
+
+        </button>
+
 
         <a href="index.html" class="logo">
-            <img src="IMAGES/ifybeeslogo.jpg" alt="Ifybee's Cakes & Confectionery">
-        </a>
-        <button class="cart-button" aria-label="Shopping cart">
-            <i class="fa-solid fa-bag-shopping"></i>
-            <span class="cart-count">0</span>
-        </button>
 
-        <button class="menu-button" aria-label="Open menu" aria-expanded="false">
-            <i class="fa-solid fa-bars"></i>
-        </button>
+            <img src="IMAGES/ifybeeslogo.jpg"
+                alt="Ifybee's Cakes and Confectionery">
+
+        </a>
+
+
+        <div class="header-icons">
+
+            <a href="about.html"
+                class="user-btn"
+                aria-label="About Ifybee's">
+
+                <i class="fa-regular fa-user"></i>
+
+            </a>
+
+
+            <button class="cart-btn"
+                type="button"
+                aria-label="Open shopping cart">
+
+                <i class="fa-solid fa-bag-shopping"></i>
+
+                <span class="cart-count">0</span>
+
+            </button>
+
+        </div>
 
     </header>
 
 
-    <div id="cart-overlay" class="cart-overlay" aria-hidden="true"></div>
-    <aside id="cart" class="cart" aria-hidden="true" aria-label="Shopping cart">
-        <div class="cart-header">
-            <div><span class="cart-kicker">IFYBEE'S</span><h2>Your Cart</h2></div>
-            <button id="close-cart" type="button" aria-label="Close shopping cart"><i class="fa-solid fa-xmark" aria-hidden="true"></i></button>
-        </div>
-        <div id="cart-list" class="cart-list" aria-live="polite"></div>
-        <div class="cart-footer"><h3>Total: <span id="cart-total">₦0</span></h3><button class="checkout-button" type="button">Checkout</button></div>
-    </aside>
 
+    <!-- SIDE MENU -->
 
     <div class="menu-overlay"></div>
 
-    <aside class="side-menu" id="site-menu" aria-hidden="true">
-        <div class="side-menu-header">
-            <div>
-                <span class="menu-small-title">IFYBEE'S</span>
-                <span class="menu-title">MENU</span>
-            </div>
-            <button class="close-menu" type="button" aria-label="Close navigation menu">
-                <i class="fa-solid fa-xmark" aria-hidden="true"></i>
-            </button>
+
+    <aside class="menu">
+
+        <div class="menu-logo">
+
+            <img src="IMAGES/ifybeeslogo.jpg"
+                alt="Ifybee's Cakes and Confectionery">
+
         </div>
-        <nav class="side-menu-links" aria-label="Main navigation">
-            <a href="index.html" class="active" aria-current="page">Home</a>
-            <a href="customcakes.html">Custom Cakes</a>
-            <a href="academy.html">Academy</a>
-            <a href="events.html">Events</a>
-            <a href="gallery.html">Gallery</a>
-            <a href="about.html">About</a>
+
+
+        <p class="menu-title">
+            Explore Ifybee's
+        </p>
+
+
+        <nav>
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="shop.html">
+                Shop
+            </a>
+
+            <a href="customcakes.html">
+                Custom Cakes
+            </a>
+
+            <a href="academy.html">
+                Academy
+            </a>
+
+            <a href="events.html">
+                Events
+            </a>
+
+            <a href="gallery.html">
+                Gallery
+            </a>
+
+            <a href="about.html">
+                About
+            </a>
+
         </nav>
-        <div class="side-menu-footer">
-            <p>Something beautiful is waiting for you.</p>
-            <a href="shop.html" class="menu-order-button">Order Something Special
+
+
+        <div class="menu-bottom">
+
+            <p>
+                Something special is waiting.
+            </p>
+
+            <a href="shop.html" class="menu-btn-link">
+                Shop Now
                 <i class="fa-solid fa-arrow-right"></i>
             </a>
+
         </div>
+
     </aside>
+
+
+
+    <!-- CART -->
+
+    <div class="cart-overlay"></div>
+
+
+    <aside class="cart">
+
+        <div class="cart-header">
+
+            <div>
+
+                <p class="small-title">
+                    IFYBEE'S
+                </p>
+
+                <h2>
+                    Your Cart
+                </h2>
+
+            </div>
+
+
+            <button class="cart-close"
+                type="button"
+                aria-label="Close cart">
+
+                <i class="fa-solid fa-xmark"></i>
+
+            </button>
+
+        </div>
+
+
+        <div class="cart-items"></div>
+
+
+        <div class="cart-bottom">
+
+            <div class="cart-total">
+
+                <span>
+                    Total
+                </span>
+
+                <strong class="cart-total-price">
+                    ₦0
+                </strong>
+
+            </div>
+
+
+            <a href="shop.html"
+                class="cart-checkout">
+
+                Continue Shopping
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+        </div>
+
+    </aside>
+
 
 
     <main>
 
+
+        <!-- SHOP HERO -->
+
         <section class="shop-hero">
+
+            <div class="hero-image"></div>
+
+            <div class="hero-overlay"></div>
+
+
+            <div class="hero-decoration decoration-one">
+                ✦
+            </div>
+
+            <div class="hero-decoration decoration-two">
+                ✦
+            </div>
+
 
             <div class="shop-hero-content">
 
-                <p class="section-label">
+                <p class="section-title">
                     THE IFYBEE'S COLLECTION
                 </p>
 
+
                 <h1>
+
                     Something
-                    <span>sweet awaits.</span>
+
+                    <span>
+                        sweet awaits.
+                    </span>
+
                 </h1>
 
-                <p>
-                    Explore our selection of beautiful cakes,
-                    freshly baked pastries and special creations
-                    made for every occasion.
+
+                <p class="hero-text">
+
+                    Explore cakes, pastries and sweet creations
+                    made for everyday moments, celebrations
+                    and everything in between.
+
                 </p>
+
+
+                <a href="#products"
+                    class="hero-link">
+
+                    Explore Collection
+
+                    <i class="fa-solid fa-arrow-down"></i>
+
+                </a>
+
+            </div>
+
+
+            <div class="hero-bottom">
+
+                <span>
+                    SHOP IFYBEE'S
+                </span>
+
+                <span>
+                    01 / 01
+                </span>
 
             </div>
 
         </section>
 
 
-        <section class="shop-section">
 
-            <div class="shop-toolbar">
+        <!-- SHOP INTRO -->
 
-                <div class="shop-introduction">
+        <section class="shop-intro">
 
-                    <p class="section-label">
-                        SHOP IFYBEE'S
+            <div class="logo-mark">
+
+                <span></span>
+
+                <img src="IMAGES/ifybeeslogo.jpg"
+                    alt="Ifybee's">
+
+                <span></span>
+
+            </div>
+
+
+            <p class="section-title">
+                MADE WITH CARE
+            </p>
+
+
+            <h2>
+
+                Choose something
+
+                <span>
+                    delicious.
+                </span>
+
+            </h2>
+
+
+            <p>
+
+                From celebration cakes to freshly baked pastries,
+                discover some of the sweet creations available
+                from Ifybee's Cakes & Confectionery.
+
+            </p>
+
+        </section>
+
+
+
+        <!-- PRODUCTS -->
+
+        <section class="products" id="products">
+
+
+            <div class="shop-top">
+
+                <div>
+
+                    <p class="section-title">
+                        THE COLLECTION
                     </p>
 
                     <h2>
-                        Find your
-                        <span>favourite.</span>
+                        Shop
+                        <span>Ifybee's.</span>
                     </h2>
 
                 </div>
 
 
-                <div class="shop-tools">
+                <div class="shop-note">
 
-                    <div class="search-box">
+                    <i class="fa-solid fa-sparkles"></i>
 
-                        <i class="fa-solid fa-magnifying-glass"></i>
-
-                        <input type="search" id="product-search" placeholder="Search products..."
-                            aria-label="Search products">
-
-                    </div>
-
-
-                    <div class="filter-box">
-
-                        <button class="filter-button active" data-category="all">
-                            All
-                        </button>
-
-                        <button class="filter-button" data-category="cakes">
-                            Cakes
-                        </button>
-
-                        <button class="filter-button" data-category="pastries">
-                            Pastries
-                        </button>
-
-                        <button class="filter-button" data-category="specials">
-                            Specials
-                        </button>
-
-                    </div>
+                    <p>
+                        Freshly made creations for
+                        every kind of occasion.
+                    </p>
 
                 </div>
 
             </div>
 
 
-            <div class="product-grid" id="product-grid">
 
-                <article class="shop-product-card reveal-item" data-category="cakes"
+            <!-- SEARCH AND FILTER -->
+
+            <div class="shop-tools">
+
+
+                <div class="search">
+
+                    <i class="fa-solid fa-magnifying-glass"></i>
+
+                    <input
+                        type="search"
+                        id="product-search"
+                        placeholder="Search the collection..."
+                        aria-label="Search products">
+
+                </div>
+
+
+                <div class="filters">
+
+                    <button
+                        class="filter active"
+                        data-category="all">
+
+                        All
+
+                    </button>
+
+
+                    <button
+                        class="filter"
+                        data-category="cakes">
+
+                        Cakes
+
+                    </button>
+
+
+                    <button
+                        class="filter"
+                        data-category="pastries">
+
+                        Pastries
+
+                    </button>
+
+
+                    <button
+                        class="filter"
+                        data-category="specials">
+
+                        Specials
+
+                    </button>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- PRODUCT GRID -->
+
+            <div class="product-grid"
+                id="product-grid">
+
+
+                <!-- PRODUCT 1 -->
+
+                <article class="card"
+                    data-category="cakes"
                     data-name="Signature Celebration Cake">
 
-                    <div class="shop-product-image">
+                    <div class="card-image">
 
-                        <img src="IMAGES/cakes/cake image 3.jpg" alt="Signature celebration cake">
+                        <img
+                            src="IMAGES/cakes/cake image 3.jpg"
+                            alt="Signature Celebration Cake">
 
-                        <span class="product-badge">
+                        <span class="badge">
                             Featured
                         </span>
 
-                        <button class="quick-view" aria-label="Quick view">
-                            <i class="fa-solid fa-eye"></i>
-                        </button>
-
                     </div>
 
-                    <div class="shop-product-info">
 
-                        <p class="product-category">
+                    <div class="card-content">
+
+                        <p class="card-category">
                             CAKES
                         </p>
 
@@ -185,20 +463,29 @@
                             Signature Celebration Cake
                         </h3>
 
-                        <p class="product-description">
-                            A carefully decorated celebration cake with a soft,
-                            sweet finish, created for birthdays and memorable occasions.
+                        <p>
+                            A beautiful cake designed for
+                            memorable celebrations.
                         </p>
 
-                        <div class="product-bottom">
+
+                        <div class="card-bottom">
 
                             <strong>
                                 ₦25,000
                             </strong>
 
-                            <button class="add-cart" data-product="Signature Celebration Cake">
+
+                            <button
+                                class="add-cart"
+                                data-name="Signature Celebration Cake"
+                                data-price="25000"
+                                data-image="IMAGES/cakes/cake image 3.jpg">
+
                                 Add to Cart
-                                <i class="fa-solid fa-arrow-right"></i>
+
+                                <i class="fa-solid fa-plus"></i>
+
                             </button>
 
                         </div>
@@ -208,22 +495,25 @@
                 </article>
 
 
-                <article class="shop-product-card reveal-item" data-category="cakes"
+
+                <!-- PRODUCT 2 -->
+
+                <article class="card"
+                    data-category="cakes"
                     data-name="Classic Celebration Cake">
 
-                    <div class="shop-product-image">
+                    <div class="card-image">
 
-                        <img src="IMAGES/slide/background cake.jpg" alt="Classic celebration cake">
-
-                        <button class="quick-view" aria-label="Quick view">
-                            <i class="fa-solid fa-eye"></i>
-                        </button>
+                        <img
+                            src="IMAGES/slide/background cake.jpg"
+                            alt="Classic Celebration Cake">
 
                     </div>
 
-                    <div class="shop-product-info">
 
-                        <p class="product-category">
+                    <div class="card-content">
+
+                        <p class="card-category">
                             CAKES
                         </p>
 
@@ -231,20 +521,29 @@
                             Classic Celebration Cake
                         </h3>
 
-                        <p class="product-description">
-                            A classic celebration cake with an elegant presentation
-                            and a tender crumb, suitable for birthdays and anniversaries.
+                        <p>
+                            An elegant cake for birthdays,
+                            anniversaries and special moments.
                         </p>
 
-                        <div class="product-bottom">
+
+                        <div class="card-bottom">
 
                             <strong>
                                 ₦30,000
                             </strong>
 
-                            <button class="add-cart" data-product="Classic Celebration Cake">
+
+                            <button
+                                class="add-cart"
+                                data-name="Classic Celebration Cake"
+                                data-price="30000"
+                                data-image="IMAGES/slide/background cake.jpg">
+
                                 Add to Cart
-                                <i class="fa-solid fa-arrow-right"></i>
+
+                                <i class="fa-solid fa-plus"></i>
+
                             </button>
 
                         </div>
@@ -254,25 +553,29 @@
                 </article>
 
 
-                <article class="shop-product-card reveal-item" data-category="pastries" data-name="Fresh Meat Pie">
 
-                    <div class="shop-product-image">
+                <!-- PRODUCT 3 -->
 
-                        <img src="IMAGES/pastries/meatpie.webp" alt="Freshly baked meat pie">
+                <article class="card"
+                    data-category="pastries"
+                    data-name="Fresh Meat Pie">
 
-                        <span class="product-badge">
+                    <div class="card-image">
+
+                        <img
+                            src="IMAGES/pastries/meatpie.webp"
+                            alt="Fresh Meat Pie">
+
+                        <span class="badge">
                             Popular
                         </span>
 
-                        <button class="quick-view" aria-label="Quick view">
-                            <i class="fa-solid fa-eye"></i>
-                        </button>
-
                     </div>
 
-                    <div class="shop-product-info">
 
-                        <p class="product-category">
+                    <div class="card-content">
+
+                        <p class="card-category">
                             PASTRIES
                         </p>
 
@@ -280,20 +583,29 @@
                             Fresh Meat Pie
                         </h3>
 
-                        <p class="product-description">
-                            Golden pastry filled with a savoury meat mixture,
-                            freshly baked for a satisfying snack or light treat.
+                        <p>
+                            Golden, freshly baked pastry
+                            with a delicious savoury filling.
                         </p>
 
-                        <div class="product-bottom">
+
+                        <div class="card-bottom">
 
                             <strong>
                                 ₦5,000
                             </strong>
 
-                            <button class="add-cart" data-product="Fresh Meat Pie">
+
+                            <button
+                                class="add-cart"
+                                data-name="Fresh Meat Pie"
+                                data-price="5000"
+                                data-image="IMAGES/pastries/meatpie.webp">
+
                                 Add to Cart
-                                <i class="fa-solid fa-arrow-right"></i>
+
+                                <i class="fa-solid fa-plus"></i>
+
                             </button>
 
                         </div>
@@ -303,22 +615,25 @@
                 </article>
 
 
-                <article class="shop-product-card reveal-item" data-category="pastries"
+
+                <!-- PRODUCT 4 -->
+
+                <article class="card"
+                    data-category="pastries"
                     data-name="Fresh Pastry Selection">
 
-                    <div class="shop-product-image">
+                    <div class="card-image">
 
-                        <img src="IMAGES/pastries/IMG-20260720-WA0073.jpg" alt="Fresh pastry selection">
-
-                        <button class="quick-view" aria-label="Quick view">
-                            <i class="fa-solid fa-eye"></i>
-                        </button>
+                        <img
+                            src="IMAGES/pastries/IMG-20260720-WA0073.jpg"
+                            alt="Fresh Pastry Selection">
 
                     </div>
 
-                    <div class="shop-product-info">
 
-                        <p class="product-category">
+                    <div class="card-content">
+
+                        <p class="card-category">
                             PASTRIES
                         </p>
 
@@ -326,20 +641,29 @@
                             Fresh Pastry Selection
                         </h3>
 
-                        <p class="product-description">
-                            A varied selection of freshly baked pastry treats,
-                            prepared for sharing at home, gatherings or casual moments.
+                        <p>
+                            A selection of freshly baked
+                            treats perfect for sharing.
                         </p>
 
-                        <div class="product-bottom">
+
+                        <div class="card-bottom">
 
                             <strong>
                                 ₦8,000
                             </strong>
 
-                            <button class="add-cart" data-product="Fresh Pastry Selection">
+
+                            <button
+                                class="add-cart"
+                                data-name="Fresh Pastry Selection"
+                                data-price="8000"
+                                data-image="IMAGES/pastries/IMG-20260720-WA0073.jpg">
+
                                 Add to Cart
-                                <i class="fa-solid fa-arrow-right"></i>
+
+                                <i class="fa-solid fa-plus"></i>
+
                             </button>
 
                         </div>
@@ -349,26 +673,87 @@
                 </article>
 
 
-                <article class="shop-product-card reveal-item" data-category="specials"
-                    data-name="Ifybee's Special Creation">
 
-                    <div class="shop-product-image">
+                <!-- PRODUCT 5 -->
 
-                        <img src="IMAGES/academy/A.webp" alt="Ifybee's special creation">
+                <article class="card"
+                    data-category="pastries"
+                    data-name="Fresh Doughnuts">
 
-                        <span class="product-badge">
-                            Special
-                        </span>
+                    <div class="card-image">
 
-                        <button class="quick-view" aria-label="Quick view">
-                            <i class="fa-solid fa-eye"></i>
-                        </button>
+                        <img
+                            src="IMAGES/pastries/donughts.webp"
+                            alt="Fresh Doughnuts">
 
                     </div>
 
-                    <div class="shop-product-info">
 
-                        <p class="product-category">
+                    <div class="card-content">
+
+                        <p class="card-category">
+                            PASTRIES
+                        </p>
+
+                        <h3>
+                            Fresh Doughnuts
+                        </h3>
+
+                        <p>
+                            Soft, sweet and freshly prepared
+                            for a delicious little treat.
+                        </p>
+
+
+                        <div class="card-bottom">
+
+                            <strong>
+                                ₦6,000
+                            </strong>
+
+
+                            <button
+                                class="add-cart"
+                                data-name="Fresh Doughnuts"
+                                data-price="6000"
+                                data-image="IMAGES/pastries/donughts.webp">
+
+                                Add to Cart
+
+                                <i class="fa-solid fa-plus"></i>
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- PRODUCT 6 -->
+
+                <article class="card"
+                    data-category="specials"
+                    data-name="Ifybee's Special Creation">
+
+                    <div class="card-image">
+
+                        <img
+                            src="IMAGES/academy/A.webp"
+                            alt="Ifybee's Special Creation">
+
+                        <span class="badge">
+                            Special
+                        </span>
+
+                    </div>
+
+
+                    <div class="card-content">
+
+                        <p class="card-category">
                             SPECIALS
                         </p>
 
@@ -376,20 +761,29 @@
                             Ifybee's Special Creation
                         </h3>
 
-                        <p class="product-description">
-                            A distinctive sweet creation with an artistic presentation,
-                            made for customers looking for something special.
+                        <p>
+                            A creative sweet creation
+                            for something a little different.
                         </p>
 
-                        <div class="product-bottom">
+
+                        <div class="card-bottom">
 
                             <strong>
                                 ₦15,000
                             </strong>
 
-                            <button class="add-cart" data-product="Ifybee's Special Creation">
+
+                            <button
+                                class="add-cart"
+                                data-name="Ifybee's Special Creation"
+                                data-price="15000"
+                                data-image="IMAGES/academy/A.webp">
+
                                 Add to Cart
-                                <i class="fa-solid fa-arrow-right"></i>
+
+                                <i class="fa-solid fa-plus"></i>
+
                             </button>
 
                         </div>
@@ -399,23 +793,25 @@
                 </article>
 
 
-                <article class="shop-product-card reveal-item" data-category="specials"
+
+                <!-- PRODUCT 7 -->
+
+                <article class="card"
+                    data-category="specials"
                     data-name="Ifybee's Signature Special">
 
-                    <div class="shop-product-image">
+                    <div class="card-image">
 
-                        <img src="IMAGES/academy/file_000000003fd08246ad0846f3a525e5c6.png"
-                            alt="Ifybee's signature special">
-
-                        <button class="quick-view" aria-label="Quick view">
-                            <i class="fa-solid fa-eye"></i>
-                        </button>
+                        <img
+                            src="IMAGES/academy/file_000000003fd08246ad0846f3a525e5c6.png"
+                            alt="Ifybee's Signature Special">
 
                     </div>
 
-                    <div class="shop-product-info">
 
-                        <p class="product-category">
+                    <div class="card-content">
+
+                        <p class="card-category">
                             SPECIALS
                         </p>
 
@@ -423,20 +819,29 @@
                             Ifybee's Signature Special
                         </h3>
 
-                        <p class="product-description">
-                            A signature sweet creation with a polished finish,
-                            suitable for celebrations and thoughtful gifting.
+                        <p>
+                            A creative creation made
+                            for special occasions.
                         </p>
 
-                        <div class="product-bottom">
+
+                        <div class="card-bottom">
 
                             <strong>
                                 ₦20,000
                             </strong>
 
-                            <button class="add-cart" data-product="Ifybee's Signature Special">
+
+                            <button
+                                class="add-cart"
+                                data-name="Ifybee's Signature Special"
+                                data-price="20000"
+                                data-image="IMAGES/academy/file_000000003fd08246ad0846f3a525e5c6.png">
+
                                 Add to Cart
-                                <i class="fa-solid fa-arrow-right"></i>
+
+                                <i class="fa-solid fa-plus"></i>
+
                             </button>
 
                         </div>
@@ -444,6 +849,7 @@
                     </div>
 
                 </article>
+
 
             </div>
 
@@ -462,96 +868,165 @@
 
             </div>
 
+
         </section>
 
 
-        <section class="custom-order-banner">
 
-            <div class="custom-order-content reveal-item">
+        <!-- CUSTOM ORDER -->
 
-                <p class="section-label">
-                    CAN'T FIND WHAT YOU WANT?
+        <section class="custom-order">
+
+
+            <div class="custom-image">
+
+                <img
+                    src="IMAGES/cakes/cake image 3.jpg"
+                    alt="Custom cake by Ifybee's">
+
+            </div>
+
+
+            <div class="custom-content">
+
+                <p class="section-title">
+                    HAVE SOMETHING ELSE IN MIND?
                 </p>
+
 
                 <h2>
-                    Create something
-                    <span>uniquely yours.</span>
+
+                    Your idea.
+
+                    <span>
+                        Our craft.
+                    </span>
+
                 </h2>
 
+
                 <p>
-                    Have a specific cake or design in mind?
-                    Tell us what you're imagining and let
-                    Ifybee's bring it to life.
+
+                    If you already have a particular design,
+                    flavour or celebration in mind, tell us
+                    what you are looking for and we can work
+                    from your idea.
+
                 </p>
 
-                <a href="#" class="btn btn-primary">
-                    Create Your Cake
+
+                <a href="customcakes.html"
+                    class="button">
+
+                    Request a Custom Cake
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
                 </a>
 
             </div>
 
-            <div class="custom-order-image reveal-item">
+        </section>
 
-                <img src="IMAGES/cakes/cake image 3.jpg" alt="Custom cake by Ifybee's">
+
+
+        <!-- SHOP NOTE -->
+
+        <section class="shop-note-section">
+
+            <div class="note-logo">
+
+                <img
+                    src="IMAGES/ifybeeslogo.jpg"
+                    alt="Ifybee's">
 
             </div>
+
+
+            <div>
+
+                <p class="section-title">
+                    A LITTLE SOMETHING EXTRA
+                </p>
+
+                <h2>
+                    Made for moments
+                    <span>worth celebrating.</span>
+                </h2>
+
+            </div>
+
+
+            <a href="events.html"
+                class="button dark-button">
+
+                Explore Events
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
 
         </section>
 
     </main>
 
 
-    <div class="cart-notification" id="cart-notification">
 
-        <div class="cart-notification-icon">
-            <i class="fa-solid fa-check"></i>
-        </div>
+    <!-- FOOTER -->
 
-        <div>
-            <strong>
-                Added to cart
-            </strong>
-
-            <p id="notification-product">
-                Product added successfully.
-            </p>
-        </div>
-
-    </div>
+    <footer class="footer">
 
 
-    <footer class="site-footer">
+        <div class="footer-top">
 
-        <div class="footer-main">
 
             <div class="footer-brand">
 
-                <a href="index.html" class="footer-logo">
-                    <img src="IMAGES/ifybeeslogo.jpg" alt="Ifybee's Cakes & Confectionery">
-                </a>
+                <img
+                    src="IMAGES/ifybeeslogo.jpg"
+                    alt="Ifybee's Cakes and Confectionery">
+
 
                 <p>
-                    Beautiful cakes, delicious pastries and
-                    memorable experiences, crafted for every
-                    occasion.
+
+                    Beautiful cakes, delicious pastries
+                    and memorable experiences, crafted
+                    for every occasion.
+
                 </p>
 
-                <div class="footer-socials">
 
-                    <a href="#" aria-label="Instagram">
+                <div class="socials">
+
+                    <a href="#"
+                        aria-label="Instagram">
+
                         <i class="fa-brands fa-instagram"></i>
+
                     </a>
 
-                    <a href="#" aria-label="Facebook">
+
+                    <a href="#"
+                        aria-label="Facebook">
+
                         <i class="fa-brands fa-facebook-f"></i>
+
                     </a>
 
-                    <a href="#" aria-label="TikTok">
+
+                    <a href="#"
+                        aria-label="TikTok">
+
                         <i class="fa-brands fa-tiktok"></i>
+
                     </a>
 
-                    <a href="#" aria-label="WhatsApp">
+
+                    <a href="#"
+                        aria-label="WhatsApp">
+
                         <i class="fa-brands fa-whatsapp"></i>
+
                     </a>
 
                 </div>
@@ -559,42 +1034,73 @@
             </div>
 
 
+
             <div class="footer-column">
 
-                <h3>Explore</h3>
+                <h3>
+                    Explore
+                </h3>
 
-                <a href="index.html">Home</a>
-                <a href="shop.html">Shop</a>
-                <a href="#">Custom Cakes</a>
-                <a href="#">Gallery</a>
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="shop.html">
+                    Shop
+                </a>
+
+                <a href="customcakes.html">
+                    Custom Cakes
+                </a>
+
+                <a href="gallery.html">
+                    Gallery
+                </a>
 
             </div>
 
 
+
             <div class="footer-column">
 
-                <h3>Services</h3>
+                <h3>
+                    Services
+                </h3>
 
-                <a href="#">Academy</a>
-                <a href="#">Events</a>
-                <a href="#">Catering</a>
-                <a href="#">Special Orders</a>
+                <a href="academy.html">
+                    Academy
+                </a>
+
+                <a href="events.html">
+                    Events
+                </a>
+
+                <a href="customcakes.html">
+                    Special Orders
+                </a>
 
             </div>
 
 
+
             <div class="footer-column">
 
-                <h3>Contact</h3>
+                <h3>
+                    About
+                </h3>
 
-                <a href="#">Contact Us</a>
-                <a href="#">WhatsApp</a>
-                <a href="#">Instagram</a>
-                <a href="#">Visit Us</a>
+                <a href="about.html">
+                    About Ifybee's
+                </a>
+
+                <a href="customcakes.html">
+                    Place An Order
+                </a>
 
             </div>
 
         </div>
+
 
 
         <div class="footer-bottom">
@@ -604,10 +1110,16 @@
                 All rights reserved.
             </p>
 
-            <div class="footer-legal">
 
-                <a href="#">Privacy Policy</a>
-                <a href="#">Terms & Conditions</a>
+            <div>
+
+                <a href="#">
+                    Privacy Policy
+                </a>
+
+                <a href="#">
+                    Terms & Conditions
+                </a>
 
             </div>
 
@@ -615,8 +1127,11 @@
 
     </footer>
 
-    <script src="JS/shop.js"></script>
+
+
     <script src="JS/cart.js"></script>
+
+    <script src="JS/shop.js"></script>
 
 
 </body>

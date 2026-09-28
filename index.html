@@ -17,53 +17,58 @@
         href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
         rel="stylesheet">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
-    <link rel="stylesheet" href="css/Homepage.css">
-    <link rel="stylesheet" href="css/responsiveness.css">
-
+    <link rel="stylesheet" href="CSS/Homepage.css">
+    <link rel="stylesheet" href="CSS/responsiveness.css">
 </head>
 
 <body>
 
-    <header class="navbar">
+    <!-- HEADER -->
 
-        <a class="logo" aria-label="Ifybee's Cakes & Confectionery">
-            <img src="IMAGES/ifybeeslogo.jpg" alt="Ifybee's Cakes & Confectionery logo">
+    <header class="header">
+
+        <button class="menu-btn" type="button" aria-label="Open menu">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <a href="index.html" class="logo">
+            <img src="IMAGES/ifybeeslogo.jpg" alt="Ifybee's Cakes and Confectionery">
         </a>
 
+        <div class="header-icons">
 
-        <div class="nav-actions">
-            <button class="cart-button" type="button" aria-label="Shopping cart" title="Shopping cart">
-                <i class="fa-solid fa-bag-shopping" aria-hidden="true"></i>
-                
-            <span class="cart-count" hidden>0</span></button>
+            <a href="about.html" class="user-btn" aria-label="About Ifybee's">
+                <i class="fa-regular fa-user"></i>
+            </a>
 
-            <button class="menu-button" type="button" aria-label="Open navigation menu" aria-expanded="false"
-                aria-controls="site-menu">
-                <i class="fa-solid fa-bars" aria-hidden="true"></i>
+            <button class="cart-btn" type="button" aria-label="Open shopping cart">
+                <i class="fa-solid fa-bag-shopping"></i>
+                <span class="cart-count">0</span>
             </button>
+
         </div>
+
     </header>
 
 
-    <div class="menu-overlay" aria-hidden="true"></div>
-    <aside class="side-menu" id="site-menu" aria-hidden="true">
-        <div class="side-menu-header">
-            <div>
-                <span class="menu-small-title">IFYBEE'S</span>
-                <span class="menu-title">MENU</span>
-            </div>
+    <!-- SIDE MENU -->
 
-            <button class="close-menu" type="button" aria-label="Close navigation menu">
-                <i class="fa-solid fa-xmark" aria-hidden="true"></i>
-            </button>
+    <div class="menu-overlay"></div>
 
+    <aside class="menu">
+
+        <div class="menu-logo">
+            <img src="IMAGES/ifybeeslogo.jpg" alt="Ifybee's Cakes and Confectionery">
         </div>
 
+        <p class="menu-title">Explore Ifybee's</p>
 
-        <nav class="side-menu-links" aria-label="Main navigation">
+        <nav>
 
+            <a href="index.html">Home</a>
             <a href="shop.html">Shop</a>
             <a href="customcakes.html">Custom Cakes</a>
             <a href="academy.html">Academy</a>
@@ -73,143 +78,226 @@
 
         </nav>
 
+        <div class="menu-bottom">
 
-        <div class="side-menu-footer">
             <p>
-                Something beautiful is waiting for you.
+                Beautiful cakes, delicious pastries and memorable experiences.
             </p>
-            <a href="shop.html" class="menu-order-button">Order Something Special
-                <i class="fa-solid fa-arrow-right"></i></a>
+
+            <a href="shop.html" class="menu-btn-link">
+                Shop Now
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
         </div>
 
     </aside>
 
+
+    <!-- CART -->
+
+    <div class="cart-overlay"></div>
+
+    <aside class="cart">
+
+        <div class="cart-header">
+
+            <div>
+                <p class="small-title">IFYBEE'S</p>
+                <h2>Your Cart</h2>
+            </div>
+
+            <button class="cart-close" type="button" aria-label="Close cart">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+        </div>
+
+        <div class="cart-items"></div>
+
+        <div class="cart-bottom">
+
+            <div class="cart-total">
+                <span>Total</span>
+                <strong class="cart-total-price">₦0</strong>
+            </div>
+
+            <a href="shop.html" class="cart-checkout">
+                Continue Shopping
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+        </div>
+
+    </aside>
+
+
     <main>
-        <!-- IFYBEE'S HERO SECTION IMAGE SLIDESHOW -->
+
+        <!-- HERO -->
+
         <section class="hero">
-            <div class="hero-slides" aria-hidden="true">
-                <div class="hero-slide slide-one active"></div>
-                <div class="hero-slide slide-two"></div>
-                <div class="hero-slide slide-three"></div>
-                <div class="hero-slide slide-four"></div>
+
+            <div class="slides">
+
+                <!-- Add more slides by copying one of these blocks -->
+
+                <div class="slide active"
+                    style="background-image: url('IMAGES/cakes/cake image 3.jpg');">
+                </div>
+
+                <div class="slide"
+                    style="background-image: url('IMAGES/slide/background cake.jpg');">
+                </div>
+
+                <div class="slide"
+                    style="background-image: url('IMAGES/pastries/meatpie.webp');">
+                </div>
+
+                <div class="slide"
+                    style="background-image: url('IMAGES/academy/A.webp');">
+                </div>
+
             </div>
 
-            <div class="hero-overlay"></div>
-            <div class="hero-glow"></div>
-
-            <div class="hero-sparkles" aria-hidden="true">
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
+            <div class="hero-dark"></div>
 
             <div class="hero-content">
+
                 <p class="hero-label">
                     IFYBEE'S CAKES & CONFECTIONERY
                 </p>
+
                 <h1>
                     A Taste.
                     <span>A Lifetime Delight.</span>
                 </h1>
-                <p class="hero-description">
+
+                <p class="hero-text">
                     Beautiful cakes, delicious pastries and unforgettable
                     experiences, crafted with care for every occasion.
                 </p>
 
                 <div class="hero-buttons">
-                    <a href="gallery.html" class="btn btn-primary">Explore Our Creations
+
+                    <a href="shop.html" class="button main-button">
+                        Explore Shop
                         <i class="fa-solid fa-arrow-right"></i>
                     </a>
-                    <a href="customcakes.html" class="btn btn-outline">
-                        Customize Your Cakes
+
+                    <a href="customcakes.html" class="button outline-button">
+                        Custom Request
                     </a>
+
                 </div>
+
             </div>
 
             <div class="hero-bottom">
-                <div class="hero-scroll">
-                    <span class="scroll-line"></span>
-                    <span>Scroll to explore</span>
-                </div>
 
-                <div class="hero-navigation" aria-label="Hero slideshow controls">
-                    <button class="slide-dot active" type="button" aria-label="Show slide 1"
-                        aria-current="true"></button>
-                    <button class="slide-dot" type="button" aria-label="Show slide 2" aria-current="false"></button>
-                    <button class="slide-dot" type="button" aria-label="Show slide 3" aria-current="false"></button>
-                    <button class="slide-dot" type="button" aria-label="Show slide 4" aria-current="false"></button>
+                <div class="slide-lines">
+
+                    <button class="slide-line active" type="button"
+                        aria-label="Show slide 1"></button>
+
+                    <button class="slide-line" type="button"
+                        aria-label="Show slide 2"></button>
+
+                    <button class="slide-line" type="button"
+                        aria-label="Show slide 3"></button>
+
+                    <button class="slide-line" type="button"
+                        aria-label="Show slide 4"></button>
+
                 </div>
 
             </div>
+
         </section>
 
 
-        <section class="intro-section">
-            <div class="intro-content reveal-item">
-                <p class="section-label"> WELCOME TO IFYBEE'S</p>
+        <!-- INTRO -->
+
+        <section class="intro">
+
+            <div class="brand-mark">
+                <span></span>
+                <img src="IMAGES/ifybeeslogo.jpg" alt="Ifybee's">
+                <span></span>
+            </div>
+
+            <p class="section-title">
+                WELCOME TO IFYBEE'S
+            </p>
+
+            <h2>
+                Where every
+                <span>creation matters.</span>
+            </h2>
+
+            <p>
+                At Ifybee's Cakes & Confectionery, we believe food should be
+                more than something you eat. It should become part of the memory.
+            </p>
+
+            <p>
+                From beautifully designed celebration cakes to freshly baked
+                pastries and practical baking classes, every creation is made
+                to bring something special to your day.
+            </p>
+
+            <a href="about.html" class="text-link">
+                Discover Ifybee's
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+        </section>
+
+
+        <!-- PRODUCTS -->
+
+        <section class="products">
+
+            <div class="section-heading">
+
+                <p class="section-title">
+                    FRESH FROM IFYBEE'S
+                </p>
+
                 <h2>
-                    Where every <span>creation matters.</span></h2>
-                <p>At Ifybee's Cakes & Confectionery, we believe food should be more than something you eat.
-                    It should become part of the memory.</p>
-                <p> From beautifully designed celebration cakes to freshly baked pastries and practical baking classes,
-                    every
-                    creation is made to bring something special to your day.</p>
+                    Made to be
+                    <span>remembered.</span>
+                </h2>
 
-                <a href="about.html" class="aboutifybees-link">Discover Ifybee's<i class="fa-solid fa-arrow-right"></i>
-                </a>
+                <p>
+                    Discover some of our favourite cakes, pastries and sweet
+                    creations.
+                </p>
 
-            </div>
-        </section>
-
-        <!-- FEATURED PRODUCTS -->
-        <section class="featured-products">
-            <div class="fp-heading reveal-item">
-                <p class="fp-label">FRESH FROM IFYBEE'S</p>
-                <h2>Made to be<span> remembered</span></h2>
-                <p class="fp-description">
-                    Discover some of our favourite cakes, pastries and sweet creations.</p>
             </div>
 
 
             <div class="product-grid">
 
-                <article class="product-card reveal-item">
+                <article class="card">
 
-                    <div class="product-image">
-                        <img src="IMAGES/cakes/cake image 3.jpg" alt="Ifybee's celebration cake" loading="lazy">
-                
+                    <div class="card-image">
+                        <img src="IMAGES/cakes/cake image 3.jpg"
+                            alt="Ifybee's celebration cake">
                     </div>
 
-                    <div class="product-info">
+                    <div class="card-content">
+
+                        <p class="card-number">01</p>
+
                         <h3>Celebration Cake</h3>
 
                         <p>
-                            Elegant cake creations made for moments worth remembering.</p>
-                        <a href="shop.html" class="product-link">
-                            View in Shop
-                            <i class="fa-solid fa-arrow-right"></i>
-                        </a>
-                    </div>
-                </article>
+                            Elegant cake creations made for moments worth
+                            remembering.
+                        </p>
 
-
-                <article class="product-card reveal-item">
-                    <div class="product-image">
-                        <img src="IMAGES/slide/background cake.jpg" alt="Ifybee's cake creation" loading="lazy">
-                    </div>
-
-                    <div class="product-info">
-                        <h3> Signature Treats </h3>
-                        <p>Beautifully crafted treats for everyday enjoyment and special occasions.</p>
-
-                        <strong class="product-price" data-price="20000">₦20,000</strong>
-
-                        <a href="shop.html" class="product-link">
+                        <a href="shop.html">
                             View in Shop
                             <i class="fa-solid fa-arrow-right"></i>
                         </a>
@@ -219,31 +307,67 @@
                 </article>
 
 
-                <article class="product-card reveal-item">
+                <article class="card">
 
-                    <div class="product-image">
-                        <img src="IMAGES/pastries/meatpie.webp" alt="Ifybee's meat pie" loading="lazy">
-           
+                    <div class="card-image">
+                        <img src="IMAGES/slide/background cake.jpg"
+                            alt="Ifybee's cake creation">
                     </div>
 
-                    <div class="product-info">
-                        <h3> Fresh Pastries </h3>
-                        <p> Delicious pastry favourites prepared fresh for every craving. </p>
+                    <div class="card-content">
 
-                        <strong class="product-price" data-price="5000">₦5,000</strong>
+                        <p class="card-number">02</p>
 
-                        <a href="shop.html" class="product-link">
+                        <h3>Signature Treats</h3>
+
+                        <p>
+                            Beautifully crafted treats for everyday enjoyment
+                            and special occasions.
+                        </p>
+
+                        <a href="shop.html">
                             View in Shop
                             <i class="fa-solid fa-arrow-right"></i>
                         </a>
 
                     </div>
+
+                </article>
+
+
+                <article class="card">
+
+                    <div class="card-image">
+                        <img src="IMAGES/pastries/meatpie.webp"
+                            alt="Ifybee's meat pie">
+                    </div>
+
+                    <div class="card-content">
+
+                        <p class="card-number">03</p>
+
+                        <h3>Fresh Pastries</h3>
+
+                        <p>
+                            Delicious pastry favourites prepared fresh for
+                            every craving.
+                        </p>
+
+                        <a href="shop.html">
+                            View in Shop
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+
+                    </div>
+
                 </article>
 
             </div>
 
-            <div class="center-button reveal-item">
-                <a href="shop.html" class="btn btn-outline">
+
+            <div class="center">
+
+                <a href="shop.html" class="button dark-button">
                     Explore The Shop
                     <i class="fa-solid fa-arrow-right"></i>
                 </a>
@@ -252,33 +376,49 @@
 
         </section>
 
+
         <!-- CUSTOM CAKES -->
-        <section class="custom-cakes">
-            <div class="custom-cakes-image reveal-item">
-                <img src="IMAGES/cakes/cake image 3.jpg" alt="Custom cake by Ifybee's" loading="lazy">
+
+        <section class="custom">
+
+            <div class="custom-image">
+
+                <img src="IMAGES/cakes/cake image 3.jpg"
+                    alt="Custom cake by Ifybee's">
+
                 <div class="image-label">
                     <span>MADE</span>
                     <strong>FOR YOU</strong>
                 </div>
+
             </div>
 
-            <div class="custom-cakes-content reveal-item">
-                <p class="section-label"> MADE JUST FOR YOU </p>
+
+            <div class="custom-content">
+
+                <p class="section-title">
+                    MADE JUST FOR YOU
+                </p>
+
                 <h2>
                     Your idea.
                     <span>Our craft.</span>
                 </h2>
-                <p class="custom-cakes-description">
+
+                <p>
                     Have something special in mind? From elegant celebrations
                     to completely unique designs, tell us what you envision
                     and let Ifybee's bring it to life.
                 </p>
 
-                <div class="custom-cakes-features">
-                    <div class="custom-feature">
-                        <span class="custom-feature-icon">
+
+                <div class="features">
+
+                    <div class="feature">
+
+                        <div class="feature-icon">
                             <i class="fa-solid fa-wand-magic-sparkles"></i>
-                        </span>
+                        </div>
 
                         <div>
                             <h3>Unique Designs</h3>
@@ -287,164 +427,199 @@
 
                     </div>
 
-                    <div class="custom-feature">
-                        <span class="custom-feature-icon">
+
+                    <div class="feature">
+
+                        <div class="feature-icon">
                             <i class="fa-solid fa-image"></i>
-                        </span>
+                        </div>
+
                         <div>
                             <h3>Bring Inspiration</h3>
                             <p>Share a design you love.</p>
                         </div>
 
                     </div>
-                    <div class="custom-feature">
-                        <span class="custom-feature-icon">
+
+
+                    <div class="feature">
+
+                        <div class="feature-icon">
                             <i class="fa-solid fa-cake-candles"></i>
-                        </span>
-                        <div>
-                            <h3>Designed for any occasion.</h3>
                         </div>
+
+                        <div>
+                            <h3>Any Occasion</h3>
+                            <p>Designed around your celebration.</p>
+                        </div>
+
                     </div>
+
                 </div>
 
-                <div class="custom-cakes-buttons">
-                    <a href="customcakes.html" class="btn btn-primary">
+
+                <div class="buttons">
+
+                    <a href="customcakes.html" class="button main-button">
                         Create Your Cake
                         <i class="fa-solid fa-arrow-right"></i>
                     </a>
-                    <a href="gallery.html" class="btn btn-outline">
+
+                    <a href="gallery.html" class="button outline-button">
                         View Inspiration
                     </a>
+
                 </div>
+
             </div>
+
         </section>
 
 
         <!-- ACADEMY -->
-        <section class="academy-section">
-            <div class="academy-image reveal-item">
-                <img src="IMAGES/academy/A.webp" alt="Ifybee's Baking Academy" loading="lazy">
-                <div class="academy-image-badge">
+
+        <section class="academy">
+
+            <div class="academy-image">
+
+                <img src="IMAGES/academy/A.webp"
+                    alt="Ifybee's Baking Academy">
+
+                <div class="academy-label">
                     <span>IFYBEE'S</span>
                     <strong>ACADEMY</strong>
                 </div>
+
             </div>
 
 
-            <div class="academy-content reveal-item">
-                <p class="section-label"> LEARN • CREATE • MASTER </p>
-                <h2> Turn your passion
+            <div class="academy-content">
+
+                <p class="section-title">
+                    LEARN • CREATE • MASTER
+                </p>
+
+                <h2>
+                    Turn your passion
                     <span>into a skill.</span>
                 </h2>
 
-                <p class="academy-description">
-                    Learn the art of baking and confectionery through
-                    practical, engaging classes designed for beginners,
-                    aspiring bakers and anyone ready to take their creativity
-                    further.
+                <p>
+                    Learn the art of baking and confectionery through practical,
+                    engaging classes designed for beginners, aspiring bakers
+                    and anyone ready to take their creativity further.
                 </p>
 
-                <div class="academy-class">
-                    <div class="academy-class-date">
-                        <span>UPCOMING</span>
-                        <strong>CLASS</strong>
+
+                <div class="class-box">
+
+                    <div class="class-number">
+                        <span>IFYBEE'S</span>
+                        <strong>01</strong>
                     </div>
 
-                    <div class="academy-class-info">
-                        <p> BAKING & CONFECTIONERY </p>
-                        <h3> Professional Baking Class </h3>
+                    <div>
+                        <small>BAKING & CONFECTIONERY</small>
+                        <h3>Professional Baking Class</h3>
 
-                        <div class="academy-class-details">
-                            <span> <i class="fa-solid fa-calendar"></i> Upcoming </span>
-
-                            <span> <i class="fa-solid fa-clock"></i> Practical </span>
-                        </div>
+                        <p>
+                            Practical training • Upcoming classes
+                        </p>
                     </div>
+
                 </div>
 
-                <div class="academy-buttons">
-                    <a href="academy.html" class="btn btn-primary">
-                        Explore Academy
-                        <i class="fa-solid fa-arrow-right"></i>
-                    </a>
-                    <a href="academy.html" class="btn btn-outline">
-                        View Classes
-                    </a>
-                </div>
+
+                <a href="academy.html" class="button main-button">
+                    Explore Academy
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
             </div>
+
         </section>
 
 
         <!-- EVENTS -->
 
-        <section class="events-section">
-            <div class="events-content reveal-item">
-                <p class="section-label"> CELEBRATE WITH IFYBEE'S </p>
-                <h2> Sweet moments <span>deserve a celebration.</span> </h2>
-                <p class="events-description">
+        <section class="events">
+
+            <div class="events-content">
+
+                <p class="section-title">
+                    CELEBRATE WITH IFYBEE'S
+                </p>
+
+                <h2>
+                    Sweet moments
+                    <span>deserve a celebration.</span>
+                </h2>
+
+                <p>
                     From intimate celebrations to unforgettable events,
                     discover how Ifybee's can add something special to your
                     occasion.
                 </p>
 
 
-                <div class="event-types">
-                    <div class="event-type">
-                        <span class="event-number">01</span>
-                        <div>
+                <div class="event-list">
+
+                    <div>
+                        <span>01</span>
+                        <section>
                             <h3>Weddings</h3>
                             <p>Elegant creations for your special day.</p>
-                        </div>
+                        </section>
                     </div>
 
-                    <div class="event-type">
-                        <span class="event-number">02</span>
-                        <div>
+                    <div>
+                        <span>02</span>
+                        <section>
                             <h3>Birthdays</h3>
                             <p>Custom treats designed around your celebration.</p>
-                        </div>
+                        </section>
                     </div>
 
-                    <div class="event-type">
-                        <span class="event-number">03</span>
-                        <div>
+                    <div>
+                        <span>03</span>
+                        <section>
                             <h3>Corporate Events</h3>
                             <p>Professional catering and memorable sweet treats.</p>
-                        </div>
+                        </section>
                     </div>
 
-                    <div class="event-type">
-                        <span class="event-number">04</span>
-                        <div>
+                    <div>
+                        <span>04</span>
+                        <section>
                             <h3>Special Occasions</h3>
-                            <p>Beautiful creations for every moment worth celebrating.</p>
-                        </div>
+                            <p>Beautiful creations for every special moment.</p>
+                        </section>
                     </div>
+
                 </div>
 
 
-                <a href="events.html" class="btn btn-primary">
+                <a href="events.html" class="button main-button">
                     Plan Your Event
                     <i class="fa-solid fa-arrow-right"></i>
                 </a>
+
             </div>
 
-            <div class="events-visual reveal-item">
-                <div class="events-image-main">
-                    <img src="IMAGES/slide/background cake.jpg" alt="Ifybee's celebration cake" loading="lazy">
-                </div>
 
-                <div class="events-image-small">
-                    <img src="IMAGES/pastries/meatpie.webp" alt="Ifybee's pastry" loading="lazy">
-                </div>
+            <div class="events-images">
 
+                <img class="event-main-image"
+                    src="IMAGES/slide/background cake.jpg"
+                    alt="Ifybee's celebration cake">
 
-                <div class="events-accent">
+                <img class="event-small-image"
+                    src="IMAGES/pastries/meatpie.webp"
+                    alt="Ifybee's pastry">
 
-                    <span>MAKE IT</span>
-
+                <div class="event-word">
+                    MAKE IT
                     <strong>MEMORABLE</strong>
-
                 </div>
 
             </div>
@@ -454,11 +629,11 @@
 
         <!-- GALLERY -->
 
-        <section class="gallery-section">
+        <section class="gallery">
 
-            <div class="gallery-heading reveal-item">
+            <div class="section-heading">
 
-                <p class="section-label">
+                <p class="section-title">
                     THE IFYBEE'S EXPERIENCE
                 </p>
 
@@ -467,7 +642,7 @@
                     <span>a story.</span>
                 </h2>
 
-                <p class="gallery-description">
+                <p>
                     Cakes, pastries, celebrations and moments made with love.
                     A glimpse into everything happening at Ifybee's Cakes &
                     Confectionery.
@@ -478,54 +653,32 @@
 
             <div class="gallery-grid">
 
-                <div class="gallery-card gallery-large reveal-item">
-
-                    <img src="IMAGES/cakes/cake image 3.jpg" alt="Ifybee's cake creation" loading="lazy">
-
+                <div>
+                    <img src="IMAGES/cakes/cake image 3.jpg"
+                        alt="Ifybee's cake">
                 </div>
 
-
-                <div class="gallery-card reveal-item">
-
-                    <img src="IMAGES/slide/background cake.jpg" alt="Ifybee's cake" loading="lazy">
-
+                <div>
+                    <img src="IMAGES/slide/background cake.jpg"
+                        alt="Ifybee's cake">
                 </div>
 
-
-                <div class="gallery-card reveal-item">
-
-                    <img src="IMAGES/pastries/meatpie.webp" alt="Ifybee's meat pie" loading="lazy">
-
+                <div>
+                    <img src="IMAGES/pastries/meatpie.webp"
+                        alt="Ifybee's meat pie">
                 </div>
 
-
-                <div class="gallery-card gallery-tall reveal-item">
-
-                    <img src="IMAGES/pastries/IMG-20260720-WA0073.jpg" alt="Ifybee's pastry creation" loading="lazy">
-
-                </div>
-
-
-                <div class="gallery-card reveal-item">
-
-                    <img src="IMAGES/academy/A.webp" alt="Ifybee's Baking Academy" loading="lazy">
-
-                </div>
-
-
-                <div class="gallery-card reveal-item">
-
-                    <img src="IMAGES/academy/file_000000003fd08246ad0846f3a525e5c6.png" alt="Ifybee's Academy"
-                        loading="lazy">
-
+                <div>
+                    <img src="IMAGES/academy/A.webp"
+                        alt="Ifybee's Academy">
                 </div>
 
             </div>
 
 
-            <div class="center-button reveal-item">
+            <div class="center">
 
-                <a href="gallery.html" class="btn btn-primary">
+                <a href="gallery.html" class="button dark-button">
                     Explore Full Gallery
                     <i class="fa-solid fa-arrow-right"></i>
                 </a>
@@ -537,11 +690,11 @@
 
         <!-- WHY IFYBEE'S -->
 
-        <section class="why-section">
+        <section class="why">
 
-            <div class="why-heading reveal-item">
+            <div class="section-heading">
 
-                <p class="section-label">
+                <p class="section-title">
                     THE IFYBEE'S DIFFERENCE
                 </p>
 
@@ -559,15 +712,15 @@
             </div>
 
 
-            <div class="why-features">
+            <div class="why-grid">
 
-                <article class="why-card reveal-item">
+                <article class="why-card">
 
-                    <div class="why-card-icon">
+                    <div class="why-icon">
                         <i class="fa-solid fa-cake-candles"></i>
                     </div>
 
-                    <span class="why-card-number">01</span>
+                    <span>01</span>
 
                     <h3>Made With Care</h3>
 
@@ -579,13 +732,13 @@
                 </article>
 
 
-                <article class="why-card reveal-item">
+                <article class="why-card">
 
-                    <div class="why-card-icon">
+                    <div class="why-icon">
                         <i class="fa-solid fa-wand-magic-sparkles"></i>
                     </div>
 
-                    <span class="why-card-number">02</span>
+                    <span>02</span>
 
                     <h3>Creative Designs</h3>
 
@@ -597,13 +750,13 @@
                 </article>
 
 
-                <article class="why-card reveal-item">
+                <article class="why-card">
 
-                    <div class="why-card-icon">
+                    <div class="why-icon">
                         <i class="fa-solid fa-heart"></i>
                     </div>
 
-                    <span class="why-card-number">03</span>
+                    <span>03</span>
 
                     <h3>Made For You</h3>
 
@@ -615,19 +768,19 @@
                 </article>
 
 
-                <article class="why-card reveal-item">
+                <article class="why-card">
 
-                    <div class="why-card-icon">
+                    <div class="why-icon">
                         <i class="fa-solid fa-graduation-cap"></i>
                     </div>
 
-                    <span class="why-card-number">04</span>
+                    <span>04</span>
 
                     <h3>Learn & Grow</h3>
 
                     <p>
-                        Our academy gives aspiring bakers the opportunity to
-                        learn practical skills and build their confidence.
+                        Our academy gives aspiring bakers the opportunity
+                        to learn practical skills and build confidence.
                     </p>
 
                 </article>
@@ -637,54 +790,41 @@
         </section>
 
 
-        <!-- WHATSAPP CTA -->
+        <!-- CTA -->
 
-        <section class="order-cta">
+        <section class="cta">
 
-            <div class="cta-glow"></div>
+            <div class="cta-logo">
+                <img src="IMAGES/ifybeeslogo.jpg"
+                    alt="Ifybee's Cakes and Confectionery">
+            </div>
 
-            <div class="cta-content reveal-item">
+            <p class="section-title">
+                READY WHEN YOU ARE
+            </p>
 
-                <p class="section-label">
-                    READY WHEN YOU ARE
-                </p>
+            <h2>
+                Let's create your
+                <span>next sweet memory.</span>
+            </h2>
 
-                <h2>
-                    Let's create your
-                    <span>next sweet memory.</span>
-                </h2>
-
-                <p>
-                    Whether you're celebrating, ordering something delicious,
-                    planning an event or ready to learn, Ifybee's is here to
-                    make it special.
-                </p>
-
-
-                <div class="cta-buttons">
-
-                    <a href="shop.html" class="btn btn-primary">
-                        Order From The Shop
-                        <i class="fa-solid fa-arrow-right"></i>
-                    </a>
-
-                    <a href="customcakes.html" class="btn btn-outline">
-                        Custom Cake
-                    </a>
-
-                </div>
+            <p>
+                Whether you're celebrating, ordering something delicious,
+                planning an event or ready to learn, Ifybee's is here to
+                make it special.
+            </p>
 
 
-                <div class="whatsapp-placeholder">
+            <div class="buttons">
 
-                    <i class="fa-brands fa-whatsapp"></i>
+                <a href="shop.html" class="button main-button">
+                    Order From The Shop
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
 
-                    <div>
-                        <strong>Want to order directly?</strong>
-                        <span>WhatsApp ordering will be connected here.</span>
-                    </div>
-
-                </div>
+                <a href="customcakes.html" class="button outline-button">
+                    Custom Cake
+                </a>
 
             </div>
 
@@ -695,42 +835,32 @@
 
     <!-- FOOTER -->
 
-    <footer class="site-footer">
+    <footer class="footer">
 
-        <div class="footer-main">
+        <div class="footer-top">
 
             <div class="footer-brand">
 
-                <a href="index.html" class="footer-logo">
-
-                    <img src="IMAGES/ifybeeslogo.jpg" alt="Ifybee's Cakes & Confectionery">
-
-                </a>
+                <img src="IMAGES/ifybeeslogo.jpg"
+                    alt="Ifybee's Cakes and Confectionery">
 
                 <p>
                     Beautiful cakes, delicious pastries and memorable
                     experiences, crafted for every occasion.
                 </p>
 
+                <div class="socials">
 
-                <div class="footer-socials">
-
-                    <a href="#" aria-label="Instagram" title="Instagram">
-
+                    <a href="#" aria-label="Instagram">
                         <i class="fa-brands fa-instagram"></i>
-
                     </a>
 
-                    <a href="#" aria-label="Facebook" title="Facebook">
-
+                    <a href="#" aria-label="Facebook">
                         <i class="fa-brands fa-facebook-f"></i>
-
                     </a>
 
-                    <a href="#" aria-label="TikTok" title="TikTok">
-
+                    <a href="#" aria-label="TikTok">
                         <i class="fa-brands fa-tiktok"></i>
-
                     </a>
 
                 </div>
@@ -756,7 +886,6 @@
 
                 <a href="academy.html">Academy</a>
                 <a href="events.html">Events</a>
-                <a href="events.html">Catering</a>
                 <a href="customcakes.html">Special Orders</a>
 
             </div>
@@ -782,40 +911,19 @@
                 All rights reserved.
             </p>
 
-            <div class="footer-legal">
-
+            <div>
                 <a href="#">Privacy Policy</a>
-
                 <a href="#">Terms & Conditions</a>
-
             </div>
 
         </div>
 
     </footer>
 
-    <div id="cart-overlay" class="cart-overlay" aria-hidden="true"></div>
-    <aside id="cart" class="cart" aria-hidden="true" aria-label="Shopping cart">
-        <div class="cart-header">
-            <div>
-                <span class="cart-kicker">IFYBEE'S</span>
-                <h2>Your Cart</h2>
-            </div>
-            <button id="close-cart" type="button" aria-label="Close shopping cart">
-                <i class="fa-solid fa-xmark" aria-hidden="true"></i>
-            </button>
-        </div>
-        <div id="cart-list" class="cart-list" aria-live="polite"></div>
-        <div class="cart-footer">
-            <h3>Total: <span id="cart-total">₦0</span></h3>
-            <button class="checkout-button" type="button">Checkout</button>
-        </div>
-    </aside>
-
-
-    <script src="JS/Homepage.js"></script>
 
     <script src="JS/cart.js"></script>
+    <script src="JS/homepage.js"></script>
+
 </body>
 
 </html>

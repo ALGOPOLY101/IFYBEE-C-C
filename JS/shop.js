@@ -1,315 +1,160 @@
-document.addEventListener("DOMContentLoaded", () => {
+const menu = document.querySelector(".menu");
+const menuButton = document.querySelector(".menu-btn");
+const menuOverlay = document.querySelector(".menu-overlay");
 
-    /* =====================================================
-       MOBILE MENU
-    ===================================================== */
+menuButton.addEventListener("click", function () {
+    document.body.classList.toggle("menu-open");
+});
 
-    const menuButton =
-        document.querySelector(".menu-button");
-
-    const closeMenu =
-        document.querySelector(".close-menu");
-
-    const menuOverlay =
-        document.querySelector(".menu-overlay");
-
-    const sideMenuLinks =
-        document.querySelectorAll(".side-menu a");
+menuOverlay.addEventListener("click", function () {
+    document.body.classList.remove("menu-open");
+});
 
 
-    function openMenu() {
+const menuLinks = document.querySelectorAll(".menu a");
 
-        document.body.classList.add(
-            "menu-open"
-        );
+menuLinks.forEach(function (link) {
 
-    }
-
-
-    function closeMenuPanel() {
-
-        document.body.classList.remove(
-            "menu-open"
-        );
-
-    }
-
-
-    menuButton?.addEventListener(
-        "click",
-        openMenu
-    );
-
-
-    closeMenu?.addEventListener(
-        "click",
-        closeMenuPanel
-    );
-
-
-    menuOverlay?.addEventListener(
-        "click",
-        closeMenuPanel
-    );
-
-
-    sideMenuLinks.forEach((link) => {
-
-        link.addEventListener(
-            "click",
-            closeMenuPanel
-        );
-
+    link.addEventListener("click", function () {
+        document.body.classList.remove("menu-open");
     });
 
-
-    /* =====================================================
-       PRODUCT FILTERING
-    ===================================================== */
-
-    const productCards =
-        document.querySelectorAll(
-            ".shop-product-card"
-        );
-
-    const filterButtons =
-        document.querySelectorAll(
-            ".filter-button"
-        );
-
-    const searchInput =
-        document.querySelector(
-            "#product-search"
-        );
-
-    const noResults =
-        document.querySelector(
-            "#no-results"
-        );
+});
 
 
-    let selectedCategory = "all";
+/* PRODUCT SEARCH AND FILTER */
 
+const products = document.querySelectorAll(".card");
+const filters = document.querySelectorAll(".filter");
+const search = document.querySelector("#product-search");
+const noResults = document.querySelector("#no-results");
 
-    function filterProducts() {
+let selectedCategory = "all";
 
-        const searchTerm =
-            searchInput
-                ? searchInput.value
-                    .toLowerCase()
-                    .trim()
-                : "";
+function filterProducts() {
 
+    const searchText = search.value.toLowerCase().trim();
 
-        let visibleProducts = 0;
+    let found = 0;
 
+    products.forEach(function (product) {
 
-        productCards.forEach((card) => {
+        const category = product.dataset.category;
+        const name = product.dataset.name.toLowerCase();
 
-            const category =
-                card.dataset.category || "";
+        const correctCategory =
+            selectedCategory === "all" ||
+            category === selectedCategory;
 
-            const name =
-                (card.dataset.name || "")
-                    .toLowerCase();
+        const correctSearch =
+            name.includes(searchText);
 
+        if (correctCategory && correctSearch) {
 
-            const categoryMatches =
-                selectedCategory === "all" ||
-                category === selectedCategory;
+            product.style.display = "block";
+            found++;
 
+        } else {
 
-            const searchMatches =
-                name.includes(searchTerm);
-
-
-            const shouldShow =
-                categoryMatches &&
-                searchMatches;
-
-
-            if (shouldShow) {
-
-                card.style.display = "";
-
-                requestAnimationFrame(() => {
-
-                    card.classList.add(
-                        "visible"
-                    );
-
-                });
-
-                visibleProducts++;
-
-            } else {
-
-                card.style.display = "none";
-
-                card.classList.remove(
-                    "visible"
-                );
-
-            }
-
-        });
-
-
-        if (noResults) {
-
-            noResults.classList.toggle(
-                "visible",
-                visibleProducts === 0
-            );
+            product.style.display = "none";
 
         }
 
-    }
-
-
-    filterButtons.forEach((button) => {
-
-        button.addEventListener(
-            "click",
-            () => {
-
-                filterButtons.forEach(
-                    (item) => {
-                        item.classList.remove(
-                            "active"
-                        );
-                    }
-                );
-
-
-                button.classList.add(
-                    "active"
-                );
-
-
-                selectedCategory =
-                    button.dataset.category ||
-                    "all";
-
-
-                filterProducts();
-
-            }
-        );
-
     });
 
 
-    searchInput?.addEventListener(
-        "input",
-        filterProducts
-    );
+    if (found === 0) {
 
-
-    /* =====================================================
-       SCROLL REVEAL
-    ===================================================== */
-
-    const revealItems =
-        document.querySelectorAll(
-            ".reveal-item"
-        );
-
-
-    if ("IntersectionObserver" in window) {
-
-        const revealObserver =
-            new IntersectionObserver(
-                (entries, observer) => {
-
-                    entries.forEach((entry) => {
-
-                        if (
-                            entry.isIntersecting
-                        ) {
-
-                            entry.target.classList.add(
-                                "visible"
-                            );
-
-                            observer.unobserve(
-                                entry.target
-                            );
-
-                        }
-
-                    });
-
-                },
-                {
-                    threshold: 0.12
-                }
-            );
-
-
-        revealItems.forEach((item) => {
-
-            revealObserver.observe(item);
-
-        });
+        noResults.classList.add("show");
 
     } else {
 
-        revealItems.forEach((item) => {
-
-            item.classList.add(
-                "visible"
-            );
-
-        });
+        noResults.classList.remove("show");
 
     }
 
-
-    /* =====================================================
-       QUICK VIEW
-    ===================================================== */
-
-    const quickViewButtons =
-        document.querySelectorAll(
-            ".quick-view"
-        );
+}
 
 
-    quickViewButtons.forEach((button) => {
+filters.forEach(function (filter) {
 
-        button.addEventListener(
-            "click",
-            () => {
+    filter.addEventListener("click", function () {
 
-                const card =
-                    button.closest(
-                        ".shop-product-card"
-                    );
+        filters.forEach(function (button) {
+            button.classList.remove("active");
+        });
 
+        filter.classList.add("active");
 
-                if (!card) return;
+        selectedCategory = filter.dataset.category;
 
-
-                const productName =
-                    card.dataset.name ||
-                    "Product";
-
-
-                alert(
-                    `${productName}\n\nProduct details will be connected here later.`
-                );
-
-            }
-        );
+        filterProducts();
 
     });
 
+});
 
-    /* =====================================================
-       INITIAL FILTER STATE
-    ===================================================== */
 
-    filterProducts();
+search.addEventListener("input", filterProducts);
+
+
+/* ADD TO CART */
+
+const addButtons = document.querySelectorAll(".add-cart");
+
+addButtons.forEach(function (button) {
+
+    button.addEventListener("click", function () {
+
+        const product = {
+            name: button.dataset.name,
+            price: Number(button.dataset.price),
+            image: button.dataset.image,
+            quantity: 1
+        };
+
+
+        let cart =
+            JSON.parse(localStorage.getItem("ifybeeCart")) || [];
+
+
+        const existingProduct = cart.find(function (item) {
+
+            return item.name === product.name;
+
+        });
+
+
+        if (existingProduct) {
+
+            existingProduct.quantity++;
+
+        } else {
+
+            cart.push(product);
+
+        }
+
+
+        localStorage.setItem(
+            "ifybeeCart",
+            JSON.stringify(cart)
+        );
+
+
+        updateCart();
+
+        button.innerHTML =
+            'Added <i class="fa-solid fa-check"></i>';
+
+
+        setTimeout(function () {
+
+            button.innerHTML =
+                'Add to Cart <i class="fa-solid fa-plus"></i>';
+
+        }, 1200);
+
+    });
 
 });

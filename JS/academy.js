@@ -1,296 +1,78 @@
-"use strict";
-
-
-/* ==================== MENU ==================== */
-
-const menuButton =
-    document.querySelector(".menu-button");
-
-const closeMenuButton =
-    document.querySelector(".close-menu");
-
-const menuOverlay =
-    document.querySelector(".menu-overlay");
-
-const sideMenu =
-    document.querySelector(".side-menu");
-
+const menuButton = document.querySelector(".menu-btn");
+const sideMenu = document.querySelector(".side-menu");
+const menuOverlay = document.querySelector(".menu-overlay");
+const menuLinks = document.querySelectorAll(".menu-links a");
 
 function openMenu() {
-
     document.body.classList.add("menu-open");
-
-    menuButton?.setAttribute(
-        "aria-expanded",
-        "true"
-    );
-
-    sideMenu?.setAttribute(
-        "aria-hidden",
-        "false"
-    );
-
+    sideMenu.setAttribute("aria-hidden", "false");
 }
-
 
 function closeMenu() {
+    document.body.classList.remove("menu-open");
+    sideMenu.setAttribute("aria-hidden", "true");
+}
 
-    document.body.classList.remove(
-        "menu-open"
-    );
+if (menuButton) {
+    menuButton.addEventListener("click", openMenu);
+}
 
-    menuButton?.setAttribute(
-        "aria-expanded",
-        "false"
-    );
+if (menuOverlay) {
+    menuOverlay.addEventListener("click", closeMenu);
+}
 
-    sideMenu?.setAttribute(
-        "aria-hidden",
-        "true"
-    );
+menuLinks.forEach(function (link) {
+    link.addEventListener("click", closeMenu);
+});
 
+
+const academyForm = document.querySelector("#academyForm");
+
+if (academyForm) {
+
+    academyForm.addEventListener("submit", function (event) {
+
+        event.preventDefault();
+
+        const studentName = document.querySelector("#studentName").value;
+        const classInterest = document.querySelector("#classInterest").value;
+        const academyMessage = document.querySelector("#academyMessage").value;
+
+        const whatsappNumber = "2340000000000";
+
+        const message =
+            "Hello Ifybee's Academy,%0A%0A" +
+            "My name is " + encodeURIComponent(studentName) + ".%0A" +
+            "I am interested in: " + encodeURIComponent(classInterest) + ".%0A%0A" +
+            "Message: " + encodeURIComponent(academyMessage);
+
+        const whatsappLink =
+            "https://wa.me/" + whatsappNumber + "?text=" + message;
+
+        window.open(whatsappLink, "_blank");
+
+    });
 }
 
 
-menuButton?.addEventListener(
-    "click",
-    openMenu
-);
+const faqItems = document.querySelectorAll(".faq-list details");
 
+faqItems.forEach(function (item) {
 
-closeMenuButton?.addEventListener(
-    "click",
-    closeMenu
-);
+    item.addEventListener("toggle", function () {
 
+        if (item.open) {
 
-menuOverlay?.addEventListener(
-    "click",
-    closeMenu
-);
+            faqItems.forEach(function (otherItem) {
 
+                if (otherItem !== item) {
+                    otherItem.removeAttribute("open");
+                }
 
-document
-    .querySelectorAll(
-        ".side-menu a"
-    )
-    .forEach((link) => {
+            });
 
-        link.addEventListener(
-            "click",
-            closeMenu
-        );
+        }
 
     });
 
-
-document.addEventListener(
-    "keydown",
-    (event) => {
-
-        if (
-            event.key === "Escape" &&
-            document.body.classList.contains(
-                "menu-open"
-            )
-        ) {
-
-            closeMenu();
-
-        }
-
-    }
-);
-
-
-
-/* ==================== SCROLL REVEAL ==================== */
-
-const revealItems =
-    document.querySelectorAll(
-        ".reveal-item"
-    );
-
-
-if (
-    "IntersectionObserver" in window
-) {
-
-    const revealObserver =
-        new IntersectionObserver(
-            (entries, observer) => {
-
-                entries.forEach(
-                    (entry) => {
-
-                        if (
-                            !entry.isIntersecting
-                        ) {
-
-                            return;
-
-                        }
-
-
-                        entry.target.classList.add(
-                            "visible"
-                        );
-
-
-                        observer.unobserve(
-                            entry.target
-                        );
-
-                    }
-                );
-
-            },
-            {
-                threshold: 0.12
-            }
-        );
-
-
-    revealItems.forEach(
-        (item) => {
-
-            revealObserver.observe(item);
-
-        }
-    );
-
-} else {
-
-    revealItems.forEach(
-        (item) => {
-
-            item.classList.add(
-                "visible"
-            );
-
-        }
-    );
-
-}
-
-
-
-/* ==================== FAQ ==================== */
-
-const faqItems =
-    document.querySelectorAll(
-        ".faq-list details"
-    );
-
-
-faqItems.forEach(
-    (item) => {
-
-        item.addEventListener(
-            "toggle",
-            () => {
-
-                if (!item.open) {
-                    return;
-                }
-
-
-                faqItems.forEach(
-                    (otherItem) => {
-
-                        if (
-                            otherItem !== item
-                        ) {
-
-                            otherItem.open =
-                                false;
-
-                        }
-
-                    }
-                );
-
-            }
-        );
-
-    }
-);
-
-
-
-/* ==================== VIDEO PLACEHOLDER ==================== */
-
-const playButton =
-    document.querySelector(
-        ".play-button"
-    );
-
-const video =
-    document.querySelector(
-        ".video-inner video"
-    );
-
-const videoOverlay =
-    document.querySelector(
-        ".video-overlay"
-    );
-
-
-playButton?.addEventListener(
-    "click",
-    () => {
-
-        if (!video) {
-            return;
-        }
-
-
-        if (
-            video.querySelector("source")?.src
-        ) {
-
-            video.play();
-
-        }
-
-    }
-);
-
-
-video?.addEventListener(
-    "play",
-    () => {
-
-        if (videoOverlay) {
-
-            videoOverlay.style.opacity =
-                "0";
-
-            videoOverlay.style.pointerEvents =
-                "none";
-
-        }
-
-    }
-);
-
-
-
-/* ==================== CART PLACEHOLDER ==================== */
-
-const cartButton =
-    document.querySelector(
-        ".cart-button"
-    );
-
-
-cartButton?.addEventListener(
-    "click",
-    () => {
-
-        console.log(
-            "Cart functionality will be connected later."
-        );
-
-    }
-);
+});

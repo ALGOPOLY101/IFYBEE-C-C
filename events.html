@@ -6,41 +6,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <meta name="description"
-        content="Ifybee's Cakes & Confectionery - Beautiful cakes, pastries and memorable experiences for your special events.">
+        content="Celebrate weddings, birthdays, corporate events and special occasions with Ifybee's Cakes & Confectionery.">
 
     <title>Events | Ifybee's Cakes & Confectionery</title>
 
-    <!-- Bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <!-- Events CSS -->
-    <link rel="stylesheet" href="css/event.css">
-    <link rel="stylesheet" href="css/responsiveness.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="CSS/event.css">
+    <link rel="stylesheet" href="CSS/responsiveness.css">
 </head>
 
 <body>
 
-
-    <!-- =====================================================
-     NAVIGATION
-===================================================== -->
-
     <header class="navbar">
 
-        <a href="index.html" class="logo">
+        <a href="index.html" class="logo" aria-label="Ifybee's Cakes & Confectionery">
             <img src="IMAGES/ifybeeslogo.jpg" alt="Ifybee's Cakes & Confectionery">
         </a>
 
         <div class="nav-actions">
 
-            <button class="cart-button" aria-label="Shopping cart">
+            <button class="cart-btn" type="button" aria-label="Open shopping cart">
                 <i class="fa-solid fa-bag-shopping"></i>
-            <span class="cart-count" hidden>0</span></button>
+                <span class="cart-count">0</span>
+            </button>
 
-            <button class="menu-button" aria-label="Open menu">
+            <button class="menu-btn" type="button" aria-label="Open navigation menu">
                 <i class="fa-solid fa-bars"></i>
             </button>
 
@@ -49,571 +47,781 @@
     </header>
 
 
-    <!-- =====================================================
-     SIDE MENU
-===================================================== -->
+    <!-- SIDE MENU -->
 
     <div class="menu-overlay"></div>
 
-    <aside class="side-menu" id="site-menu" aria-hidden="true">
-        <div class="side-menu-header">
-            <div>
-                <span class="menu-small-title">IFYBEE'S</span>
-                <span class="menu-title">MENU</span>
-            </div>
-            <button class="close-menu" type="button" aria-label="Close navigation menu">
-                <i class="fa-solid fa-xmark" aria-hidden="true"></i>
-            </button>
-        </div>
-        <nav class="side-menu-links" aria-label="Main navigation">
-            <a href="shop.html">Shop</a>
-            <a href="customcakes.html">Custom Cakes</a>
-            <a href="academy.html">Academy</a>
-            <a href="events.html" class="active" aria-current="page">Events</a>
-            <a href="gallery.html">Gallery</a>
-            <a href="about.html">About</a>
-        </nav>
-        <div class="side-menu-footer">
-            <p>Something beautiful is waiting for you.</p>
-            <a href="events.html#event-enquiry" class="menu-order-button">Order Something Special
-                <i class="fa-solid fa-arrow-right"></i>
-            </a>
-        </div>
-    </aside>
+    <aside class="side-menu">
 
-
-
-    <!-- =====================================================
-     HERO
-===================================================== -->
-
-    <section class="events-hero">
-
-        <!-- Background image -->
-        <div class="events-hero-image">
-
-            <img src="IMAGES/academy/A.webp" alt="Ifybee's event experience">
-
+        <div class="side-menu-brand">
+            <img src="IMAGES/ifybeeslogo.jpg" alt="Ifybee's logo">
         </div>
 
-
-        <!-- Dark overlay -->
-        <div class="events-hero-overlay"></div>
-
-
-        <!-- Shine -->
-        <div class="shine"></div>
-
-
-        <!-- HERO TEXT -->
-        <div class="events-hero-content reveal">
-
-            <p class="hero-label">
-                CELEBRATIONS • EXPERIENCES • MEMORIES
-            </p>
-
-            <h1>
-                Made for
-                <span>your moments.</span>
-            </h1>
-
-            <p class="hero-description">
-
-                From intimate celebrations to unforgettable
-                occasions, Ifybee's brings beautiful desserts,
-                thoughtful details and delicious experiences
-                to your special day.
-
-            </p>
-
-            <div class="hero-buttons">
-
-                <a href="#event-services" class="btn btn-primary">
-                    Explore Events
-                </a>
-
-                <a href="#event-enquiry" class="btn btn-secondary">
-                    Plan Your Event
-                </a>
-
-            </div>
-
-        </div>
-
-
-        <!-- Scroll indicator -->
-        <div class="hero-scroll">
-
-            <span>Scroll to explore</span>
-
-            <span>
-                <i class="fa-solid fa-arrow-down"></i>
-            </span>
-
-        </div>
-
-    </section>
-
-
-
-    <!-- =====================================================
-     INTRO
-===================================================== -->
-
-    <section class="events-intro">
-
-        <div class="intro-container">
-
-            <div class="intro-label reveal">
-
-                <p class="section-label">
-                    MORE THAN JUST CAKE
-                </p>
-
-            </div>
-
-            <div class="intro-content reveal">
-
-                <h2>
-                    Your celebration
-                    deserves something
-                    <span>special.</span>
-                </h2>
-
-                <p>
-                    Whether you're celebrating a birthday,
-                    wedding, graduation, corporate occasion
-                    or simply creating a beautiful moment,
-                    we're here to make it memorable.
-                </p>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-
-    <!-- =====================================================
-     EVENT SERVICES
-===================================================== -->
-
-    <section class="event-services" id="event-services">
-
-        <div class="section-heading reveal">
-
-            <p class="section-label">
-                WHAT WE DO
-            </p>
-
-            <h2>
-                Bring the
-                <span>occasion to life.</span>
-            </h2>
-
-            <p class="section-description">
-                From the centrepiece to the little details,
-                choose the kind of experience you want
-                Ifybee's to create.
-            </p>
-
-        </div>
-
-
-        <div class="event-service-grid">
-
-
-            <!-- BIRTHDAYS -->
-
-            <article class="event-service-card reveal">
-
-                <div class="service-image">
-
-                    <img src="IMAGES/cakes/cake image 3.jpg" alt="Birthday celebration cake">
-
-                    <div class="service-number">
-                        01
-                    </div>
-
-                </div>
-
-                <div class="service-content">
-
-                    <p class="service-category">
-                        CELEBRATIONS
-                    </p>
-
-                    <h3>
-                        Birthdays
-                    </h3>
-
-                    <p>
-                        Beautiful cakes and sweet creations
-                        designed to make birthdays feel even
-                        more special.
-                    </p>
-
-                    <a href="#event-enquiry">
-                        Plan a birthday
-                        <i class="fa-solid fa-arrow-right"></i>
-                    </a>
-
-                </div>
-
-            </article>
-
-
-
-            <!-- WEDDINGS -->
-
-            <article class="event-service-card reveal">
-
-                <div class="service-image">
-
-                    <img src="IMAGES/slide/background cake.jpg" alt="Wedding celebration">
-
-                    <div class="service-number">
-                        02
-                    </div>
-
-                </div>
-
-                <div class="service-content">
-
-                    <p class="service-category">
-                        WEDDINGS
-                    </p>
-
-                    <h3>
-                        Weddings
-                    </h3>
-
-                    <p>
-                        Elegant cakes and carefully crafted
-                        desserts for one of life's biggest
-                        celebrations.
-                    </p>
-
-                    <a href="#event-enquiry">
-                        Plan a wedding
-                        <i class="fa-solid fa-arrow-right"></i>
-                    </a>
-
-                </div>
-
-            </article>
-
-
-
-            <!-- CORPORATE -->
-
-            <article class="event-service-card reveal">
-
-                <div class="service-image">
-
-                    <img src="IMAGES/pastries/meatpie.webp" alt="Corporate event catering">
-
-                    <div class="service-number">
-                        03
-                    </div>
-
-                </div>
-
-                <div class="service-content">
-
-                    <p class="service-category">
-                        PROFESSIONAL
-                    </p>
-
-                    <h3>
-                        Corporate Events
-                    </h3>
-
-                    <p>
-                        Sweet and savoury creations for
-                        meetings, launches, celebrations and
-                        professional gatherings.
-                    </p>
-
-                    <a href="#event-enquiry">
-                        Plan an event
-                        <i class="fa-solid fa-arrow-right"></i>
-                    </a>
-
-                </div>
-
-            </article>
-
-
-
-            <!-- SPECIAL OCCASIONS -->
-
-            <article class="event-service-card reveal">
-
-                <div class="service-image">
-
-                    <img src="IMAGES/cakes/cake image 3.jpg" alt="Special event experience">
-
-                    <div class="service-number">
-                        04
-                    </div>
-
-                </div>
-
-                <div class="service-content">
-
-                    <p class="service-category">
-                        SPECIAL OCCASIONS
-                    </p>
-
-                    <h3>
-                        Something Else?
-                    </h3>
-
-                    <p>
-                        Have something completely different
-                        in mind? Tell us what you're planning
-                        and we'll explore the possibilities.
-                    </p>
-
-                    <a href="#event-enquiry">
-                        Tell us about it
-                        <i class="fa-solid fa-arrow-right"></i>
-                    </a>
-
-                </div>
-
-            </article>
-
-        </div>
-
-    </section>
-
-
-
-    <!-- =====================================================
-     CINEMATIC STATEMENT
-===================================================== -->
-
-    <section class="event-statement">
-
-        <div class="statement-image">
-
-            <img src="IMAGES/cakes/cake image 3.jpg" alt="Ifybee's cake">
-
-        </div>
-
-        <div class="statement-overlay"></div>
-
-        <div class="statement-content reveal">
-
-            <p class="section-label">
-                THE IFYBEE'S EXPERIENCE
-            </p>
-
-            <h2>
-                It's not just
-                <span>what you serve.</span>
-            </h2>
-
-            <p>
-                It's the moment everyone remembers.
-                The first look. The photographs.
-                The conversations around the table.
-            </p>
-
-        </div>
-
-    </section>
-
-
-
-    <!-- =====================================================
-     PROCESS
-===================================================== -->
-
-    <section class="event-process">
-
-        <div class="section-heading reveal">
-
-            <p class="section-label">
-                HOW IT WORKS
-            </p>
-
-            <h2>
-                From idea
-                <span>to celebration.</span>
-            </h2>
-
-        </div>
-
-
-        <div class="process-grid">
-
-            <div class="process-item reveal">
-
-                <span class="process-number">
-                    01
-                </span>
-
-                <div class="process-icon">
-                    <i class="fa-regular fa-comments"></i>
-                </div>
-
-                <h3>
-                    Tell Us
-                </h3>
-
-                <p>
-                    Share the occasion, date and what
-                    you have in mind.
-                </p>
-
-            </div>
-
-
-            <div class="process-line"></div>
-
-
-            <div class="process-item reveal">
-
-                <span class="process-number">
-                    02
-                </span>
-
-                <div class="process-icon">
-                    <i class="fa-solid fa-wand-magic-sparkles"></i>
-                </div>
-
-                <h3>
-                    We Create
-                </h3>
-
-                <p>
-                    We'll work with your vision to create
-                    something beautiful.
-                </p>
-
-            </div>
-
-
-            <div class="process-line"></div>
-
-
-            <div class="process-item reveal">
-
-                <span class="process-number">
-                    03
-                </span>
-
-                <div class="process-icon">
-                    <i class="fa-solid fa-cake-candles"></i>
-                </div>
-
-                <h3>
-                    You Celebrate
-                </h3>
-
-                <p>
-                    Enjoy your moment while we take care
-                    of the sweet details.
-                </p>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-
-    <!-- =====================================================
-     EVENT ENQUIRY
-===================================================== -->
-
-    <section class="event-enquiry" id="event-enquiry">
-
-        <div class="enquiry-glow"></div>
-
-        <div class="enquiry-content reveal">
-
-            <p class="section-label">
-                LET'S MAKE IT SPECIAL
-            </p>
-
-            <h2>
-                Have an event
-                <span>in mind?</span>
-            </h2>
-
-            <p>
-                Tell us about your occasion and let's
-                start creating something worth remembering.
-            </p>
-
-            <div class="enquiry-buttons">
-
-                <a href="#" class="btn btn-primary">
-                    Start Your Enquiry
-                </a>
-
-                <a href="tel:+2340000000000" class="btn btn-secondary">
-                    <i class="fa-solid fa-phone"></i>
-                    Contact Us
-                </a>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-
-    <!-- =====================================================
-     FOOTER
-===================================================== -->
-
-    <footer class="events-footer">
-
-        <div class="footer-brand">
-
-            <img src="IMAGES/ifybeeslogo.jpg" alt="Ifybee's Cakes & Confectionery">
-
-            <p>
-                A taste. A lifetime delight.
-            </p>
-
-        </div>
-
-
-        <div class="footer-links">
+        <nav class="menu-links">
 
             <a href="index.html">Home</a>
             <a href="shop.html">Shop</a>
             <a href="customcakes.html">Custom Cakes</a>
             <a href="academy.html">Academy</a>
-            <a href="events.html">Events</a>
+            <a href="events.html" class="active">Events</a>
             <a href="gallery.html">Gallery</a>
             <a href="about.html">About</a>
 
+        </nav>
+
+        <div class="side-menu-footer">
+
+            <p>
+                Something beautiful is waiting for you.
+            </p>
+
+            <a href="customcakes.html" class="menu-order-button">
+                Order Something Special
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
         </div>
 
+    </aside>
 
-        <div class="footer-socials">
 
-            <a href="#" aria-label="Instagram">
-                <i class="fa-brands fa-instagram"></i>
+    <!-- CART -->
+
+    <div class="cart-overlay"></div>
+
+    <aside class="cart">
+
+        <div class="cart-header">
+
+            <div>
+                <p>YOUR SELECTION</p>
+                <h2>Your Cart</h2>
+            </div>
+
+            <button class="cart-close" type="button" aria-label="Close cart">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+        </div>
+
+        <div class="cart-items"></div>
+
+        <div class="cart-footer">
+
+            <div class="cart-total">
+                <span>Total</span>
+                <strong class="cart-total-price">₦0</strong>
+            </div>
+
+            <a href="shop.html" class="cart-shop-button">
+                Continue Shopping
+                <i class="fa-solid fa-arrow-right"></i>
             </a>
 
-            <a href="#" aria-label="Facebook">
-                <i class="fa-brands fa-facebook-f"></i>
+        </div>
+
+    </aside>
+
+
+    <main>
+
+        <!-- HERO -->
+
+        <section class="events-hero">
+
+            <div class="hero-image"></div>
+            <div class="hero-overlay"></div>
+
+            <div class="hero-content">
+
+                <p class="section-label">
+                    CELEBRATE WITH IFYBEE'S
+                </p>
+
+                <h1>
+                    Make every moment
+                    <span>worth celebrating.</span>
+                </h1>
+
+                <p>
+                    From intimate celebrations to unforgettable events,
+                    let Ifybee's add something beautiful and delicious
+                    to your special occasion.
+                </p>
+
+                <div class="hero-buttons">
+
+                    <a href="#event-types" class="event-btn primary-btn">
+                        Explore Events
+                        <i class="fa-solid fa-arrow-down"></i>
+                    </a>
+
+                    <a href="#plan" class="event-btn outline-btn">
+                        Plan Your Event
+                    </a>
+
+                </div>
+
+            </div>
+
+            <div class="hero-note">
+                <span>01</span>
+                <p>CRAFTED FOR YOUR MOMENT</p>
+            </div>
+
+        </section>
+
+
+        <!-- INTRO -->
+
+        <section class="events-intro">
+
+            <div class="intro-heading">
+
+                <p class="section-label">
+                    MORE THAN JUST CAKE
+                </p>
+
+                <h2>
+                    Your celebration
+                    <span>deserves something special.</span>
+                </h2>
+
+            </div>
+
+            <div class="intro-text">
+
+                <p>
+                    Every event has its own personality. Whether you're
+                    celebrating a new beginning, a milestone or simply
+                    bringing people together, the little details matter.
+                </p>
+
+                <p>
+                    At Ifybee's, we create cakes, pastries and sweet
+                    experiences that fit naturally into the occasion.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- EVENT TYPES -->
+
+        <section class="event-types-section" id="event-types">
+
+            <div class="section-heading">
+
+                <p class="section-label">
+                    WHAT ARE YOU CELEBRATING?
+                </p>
+
+                <h2>
+                    Something for
+                    <span>every occasion.</span>
+                </h2>
+
+                <p>
+                    Tell us what you're celebrating and we'll help you
+                    create something that fits the moment.
+                </p>
+
+            </div>
+
+
+            <div class="event-grid">
+
+                <article class="event-card event-card-large">
+
+                    <div class="event-card-image">
+
+                        <img src="IMAGES/slide/background cake.jpg"
+                            alt="Wedding celebration cake">
+
+                    </div>
+
+                    <div class="event-card-content">
+
+                        <span class="event-number">01</span>
+
+                        <h3>Weddings</h3>
+
+                        <p>
+                            Elegant cakes and sweet creations designed
+                            to complement one of the most memorable days
+                            of your life.
+                        </p>
+
+                        <a href="#plan">
+                            Plan Your Wedding
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <article class="event-card">
+
+                    <div class="event-card-image">
+
+                        <img src="IMAGES/cakes/cake image 3.jpg"
+                            alt="Birthday celebration cake">
+
+                    </div>
+
+                    <div class="event-card-content">
+
+                        <span class="event-number">02</span>
+
+                        <h3>Birthdays</h3>
+
+                        <p>
+                            Custom treats and celebration cakes
+                            designed around your personality and theme.
+                        </p>
+
+                        <a href="#plan">
+                            Celebrate With Us
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <article class="event-card">
+
+                    <div class="event-card-image">
+
+                        <img src="IMAGES/pastries/meatpie.webp"
+                            alt="Pastry selection for an event">
+
+                    </div>
+
+                    <div class="event-card-content">
+
+                        <span class="event-number">03</span>
+
+                        <h3>Corporate Events</h3>
+
+                        <p>
+                            Professional pastry and dessert options
+                            for meetings, launches and corporate gatherings.
+                        </p>
+
+                        <a href="#plan">
+                            Plan Your Event
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <article class="event-card event-card-wide">
+
+                    <div class="event-card-image">
+
+                        <img src="IMAGES/slide/background cake.jpg"
+                            alt="Special occasion celebration">
+
+                    </div>
+
+                    <div class="event-card-content">
+
+                        <span class="event-number">04</span>
+
+                        <h3>Special Occasions</h3>
+
+                        <p>
+                            Graduations, anniversaries, showers and
+                            every other moment worth making memorable.
+                        </p>
+
+                        <a href="#plan">
+                            Make It Memorable
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- EXPERIENCE -->
+
+        <section class="experience-section">
+
+            <div class="experience-image">
+
+                <img src="IMAGES/slide/background cake.jpg"
+                    alt="Ifybee's celebration cake">
+
+                <div class="experience-badge">
+
+                    <span>MAKE IT</span>
+
+                    <strong>
+                        MEMORABLE
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="experience-content">
+
+                <p class="section-label">
+                    THE IFYBEE'S EXPERIENCE
+                </p>
+
+                <h2>
+                    We take care of
+                    <span>the sweet details.</span>
+                </h2>
+
+                <p>
+                    Planning an event can come with a lot of details.
+                    Our goal is to make the cake and pastry side of
+                    things simple, creative and enjoyable.
+                </p>
+
+
+                <div class="experience-features">
+
+                    <div class="feature">
+
+                        <div class="feature-icon">
+                            <i class="fa-solid fa-cake-candles"></i>
+                        </div>
+
+                        <div>
+                            <h3>Beautiful Creations</h3>
+                            <p>
+                                Designed to complement the feeling
+                                and theme of your occasion.
+                            </p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="feature">
+
+                        <div class="feature-icon">
+                            <i class="fa-solid fa-palette"></i>
+                        </div>
+
+                        <div>
+                            <h3>Creative Details</h3>
+                            <p>
+                                From colours and styles to flavours
+                                and presentation.
+                            </p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="feature">
+
+                        <div class="feature-icon">
+                            <i class="fa-solid fa-heart"></i>
+                        </div>
+
+                        <div>
+                            <h3>Made With Care</h3>
+                            <p>
+                                Every order is treated as part of
+                                someone's special moment.
+                            </p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <a href="#plan" class="event-btn dark-btn">
+                    Start Planning
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- EVENT PROCESS -->
+
+        <section class="process-section">
+
+            <div class="section-heading">
+
+                <p class="section-label">
+                    HOW IT WORKS
+                </p>
+
+                <h2>
+                    From your idea
+                    <span>to the celebration.</span>
+                </h2>
+
+            </div>
+
+
+            <div class="process-grid">
+
+                <div class="process-item">
+
+                    <span>01</span>
+
+                    <div class="process-icon">
+                        <i class="fa-solid fa-message"></i>
+                    </div>
+
+                    <h3>Tell Us About It</h3>
+
+                    <p>
+                        Share the type of event, date, number of guests
+                        and what you have in mind.
+                    </p>
+
+                </div>
+
+
+                <div class="process-item">
+
+                    <span>02</span>
+
+                    <div class="process-icon">
+                        <i class="fa-solid fa-wand-magic-sparkles"></i>
+                    </div>
+
+                    <h3>Discuss Your Ideas</h3>
+
+                    <p>
+                        Talk through flavours, designs, quantities
+                        and other details for your occasion.
+                    </p>
+
+                </div>
+
+
+                <div class="process-item">
+
+                    <span>03</span>
+
+                    <div class="process-icon">
+                        <i class="fa-solid fa-check"></i>
+                    </div>
+
+                    <h3>Confirm Your Order</h3>
+
+                    <p>
+                        Once the details are agreed, your event order
+                        can be confirmed.
+                    </p>
+
+                </div>
+
+
+                <div class="process-item">
+
+                    <span>04</span>
+
+                    <div class="process-icon">
+                        <i class="fa-solid fa-champagne-glasses"></i>
+                    </div>
+
+                    <h3>Enjoy The Moment</h3>
+
+                    <p>
+                        Leave the sweet details to us and enjoy
+                        your special occasion.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- EVENT GALLERY -->
+
+        <section class="event-gallery">
+
+            <div class="gallery-heading">
+
+                <p class="section-label">
+                    MOMENTS WORTH REMEMBERING
+                </p>
+
+                <h2>
+                    Let your celebration
+                    <span>look as good as it feels.</span>
+                </h2>
+
+            </div>
+
+
+            <div class="gallery-images">
+
+                <div class="gallery-image large">
+                    <img src="IMAGES/slide/background cake.jpg"
+                        alt="Ifybee's event cake">
+                </div>
+
+                <div class="gallery-image">
+                    <img src="IMAGES/cakes/cake image 3.jpg"
+                        alt="Ifybee's cake creation">
+                </div>
+
+                <div class="gallery-image">
+                    <img src="IMAGES/pastries/meatpie.webp"
+                        alt="Ifybee's pastry selection">
+                </div>
+
+            </div>
+
+
+            <a href="gallery.html" class="gallery-link">
+                View More Creations
+                <i class="fa-solid fa-arrow-right"></i>
             </a>
 
-            <a href="#" aria-label="WhatsApp">
-                <i class="fa-brands fa-whatsapp"></i>
-            </a>
+        </section>
+
+
+        <!-- PLAN EVENT -->
+
+        <section class="plan-section" id="plan">
+
+            <div class="plan-content">
+
+                <img src="IMAGES/ifybeeslogo.jpg"
+                    alt="Ifybee's Cakes & Confectionery logo">
+
+                <p class="section-label">
+                    LET'S CREATE SOMETHING SPECIAL
+                </p>
+
+                <h2>
+                    Have an event
+                    <span>coming up?</span>
+                </h2>
+
+                <p>
+                    Tell us a little about your event and what you're
+                    looking for. We'll use your details to start the
+                    conversation about your celebration.
+                </p>
+
+
+                <form id="eventForm">
+
+                    <div class="form-row">
+
+                        <div class="form-group">
+
+                            <label for="eventName">
+                                Your Name
+                            </label>
+
+                            <input type="text"
+                                id="eventName"
+                                placeholder="Enter your name"
+                                required>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="eventType">
+                                Event Type
+                            </label>
+
+                            <select id="eventType" required>
+
+                                <option value="">
+                                    Select event type
+                                </option>
+
+                                <option value="Wedding">
+                                    Wedding
+                                </option>
+
+                                <option value="Birthday">
+                                    Birthday
+                                </option>
+
+                                <option value="Corporate Event">
+                                    Corporate Event
+                                </option>
+
+                                <option value="Graduation">
+                                    Graduation
+                                </option>
+
+                                <option value="Anniversary">
+                                    Anniversary
+                                </option>
+
+                                <option value="Other">
+                                    Other
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-row">
+
+                        <div class="form-group">
+
+                            <label for="eventDate">
+                                Event Date
+                            </label>
+
+                            <input type="date"
+                                id="eventDate">
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="guestNumber">
+                                Number of Guests
+                            </label>
+
+                            <input type="number"
+                                id="guestNumber"
+                                placeholder="Approximate number"
+                                min="1">
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="eventMessage">
+                            Tell Us About Your Event
+                        </label>
+
+                        <textarea id="eventMessage"
+                            placeholder="Tell us about your theme, cake idea, flavours or anything else you have in mind..."
+                            required></textarea>
+
+                    </div>
+
+
+                    <button type="submit" class="event-btn primary-btn">
+                        Send Event Enquiry
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </button>
+
+                </form>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+
+    <footer class="site-footer">
+
+        <div class="footer-main">
+
+            <div class="footer-brand">
+
+                <a href="index.html">
+
+                    <img src="IMAGES/ifybeeslogo.jpg"
+                        alt="Ifybee's Cakes & Confectionery">
+
+                </a>
+
+                <p>
+                    Cakes, pastries, celebrations and creative
+                    experiences made with care.
+                </p>
+
+                <div class="footer-socials">
+
+                    <a href="#" aria-label="Instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+
+                    <a href="#" aria-label="Facebook">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+
+                    <a href="#" aria-label="TikTok">
+                        <i class="fa-brands fa-tiktok"></i>
+                    </a>
+
+                    <a href="#" aria-label="WhatsApp">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>Explore</h3>
+
+                <a href="index.html">Home</a>
+                <a href="shop.html">Shop</a>
+                <a href="customcakes.html">Custom Cakes</a>
+                <a href="gallery.html">Gallery</a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>Ifybee's</h3>
+
+                <a href="academy.html">Academy</a>
+                <a href="events.html">Events</a>
+                <a href="about.html">About</a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>Events</h3>
+
+                <a href="#event-types">Event Types</a>
+                <a href="#plan">Plan An Event</a>
+                <a href="gallery.html">Our Creations</a>
+                <a href="customcakes.html">Custom Cakes</a>
+
+            </div>
 
         </div>
 
@@ -629,29 +837,10 @@
 
     </footer>
 
-    <div id="cart-overlay" class="cart-overlay" aria-hidden="true"></div>
-    <aside id="cart" class="cart" aria-hidden="true" aria-label="Shopping cart">
-        <div class="cart-header">
-            <div><span class="cart-kicker">IFYBEE'S</span><h2>Your Cart</h2></div>
-            <button id="close-cart" type="button" aria-label="Close shopping cart"><i class="fa-solid fa-xmark" aria-hidden="true"></i></button>
-        </div>
-        <div id="cart-list" class="cart-list" aria-live="polite"></div>
-        <div class="cart-footer"><h3>Total: <span id="cart-total">₦0</span></h3><button class="checkout-button" type="button">Checkout</button></div>
-    </aside>
-
-
-
-    <!-- Bootstrap -->
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
-    </script>
-
-
-    <!-- Events JavaScript -->
-
-    <script src="JS/event.js"></script>
 
     <script src="JS/cart.js"></script>
+    <script src="JS/event.js"></script>
+
 </body>
 
 </html>

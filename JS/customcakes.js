@@ -1,237 +1,105 @@
-const menuButton = document.querySelector(".menu-button");
-const closeMenu = document.querySelector(".close-menu");
+const menuButton = document.querySelector(".menu-btn");
+const sideMenu = document.querySelector(".side-menu");
 const menuOverlay = document.querySelector(".menu-overlay");
 
-function openMenu() {
-    document.body.classList.add("menu-open");
-
-    if (menuButton) {
-        menuButton.setAttribute("aria-expanded", "true");
-    }
-}
-
-function closeMenuPanel() {
-    document.body.classList.remove("menu-open");
-
-    if (menuButton) {
-        menuButton.setAttribute("aria-expanded", "false");
-    }
-}
-
-if (menuButton) {
-    menuButton.addEventListener("click", openMenu);
-}
-
-if (closeMenu) {
-    closeMenu.addEventListener("click", closeMenuPanel);
-}
-
-if (menuOverlay) {
-    menuOverlay.addEventListener("click", closeMenuPanel);
-}
-
-document.addEventListener("keydown", (event) => {
-    if (event.key === "Escape") {
-        closeMenuPanel();
-    }
-});
-
-const menuLinks = document.querySelectorAll(".side-menu-links a");
-
-menuLinks.forEach((link) => {
-    link.addEventListener("click", closeMenuPanel);
+menuButton.addEventListener("click", function () {
+    sideMenu.classList.toggle("active");
+    menuOverlay.classList.toggle("active");
 });
 
 
-const revealItems = document.querySelectorAll(".reveal-item");
-
-if ("IntersectionObserver" in window) {
-
-    const revealObserver = new IntersectionObserver(
-        (entries, observer) => {
-
-            entries.forEach((entry) => {
-
-                if (entry.isIntersecting) {
-
-                    entry.target.classList.add("visible");
-
-                    observer.unobserve(entry.target);
-
-                }
-
-            });
-
-        },
-        {
-            threshold: 0.12
-        }
-    );
-
-    revealItems.forEach((item) => {
-        revealObserver.observe(item);
-    });
-
-} else {
-
-    revealItems.forEach((item) => {
-        item.classList.add("visible");
-    });
-
-}
+menuOverlay.addEventListener("click", function () {
+    sideMenu.classList.remove("active");
+    menuOverlay.classList.remove("active");
+});
 
 
-const faqItems = document.querySelectorAll(".faq-item");
+const inspirationInput = document.querySelector("#inspiration");
+const imagePreview = document.querySelector("#imagePreview");
 
-faqItems.forEach((item) => {
+inspirationInput.addEventListener("change", function () {
 
-    const question = item.querySelector(".faq-question");
-    const answer = item.querySelector(".faq-answer");
+    const file = inspirationInput.files[0];
 
-    if (!question || !answer) {
+    imagePreview.innerHTML = "";
+
+    if (!file) {
+        imagePreview.classList.remove("active");
         return;
     }
 
-    question.setAttribute("aria-expanded", "false");
+    const image = document.createElement("img");
 
-    question.addEventListener("click", () => {
+    image.src = URL.createObjectURL(file);
 
-        const isActive = item.classList.contains("active");
+    image.alt = "Selected cake inspiration";
 
-        faqItems.forEach((otherItem) => {
+    imagePreview.appendChild(image);
 
-            const otherQuestion = otherItem.querySelector(".faq-question");
-            const otherAnswer = otherItem.querySelector(".faq-answer");
-
-            otherItem.classList.remove("active");
-
-            if (otherQuestion) {
-                otherQuestion.setAttribute("aria-expanded", "false");
-            }
-
-            if (otherAnswer) {
-                otherAnswer.style.maxHeight = null;
-            }
-
-        });
-
-        if (!isActive) {
-
-            item.classList.add("active");
-
-            question.setAttribute("aria-expanded", "true");
-
-            answer.style.maxHeight = answer.scrollHeight + "px";
-
-        }
-
-    });
-
+    imagePreview.classList.add("active");
 });
 
 
-const videoPlayButton = document.querySelector(".video-play");
+const customCakeForm = document.querySelector("#customCakeForm");
+const formSuccess = document.querySelector("#formSuccess");
+const whatsappLink = document.querySelector("#whatsappLink");
+const editEnquiry = document.querySelector("#editEnquiry");
 
-if (videoPlayButton) {
+customCakeForm.addEventListener("submit", function (event) {
 
-    videoPlayButton.addEventListener("click", () => {
+    event.preventDefault();
 
-        const videoSection = document.querySelector(".video-section");
+    const name = document.querySelector("#name").value;
+    const phone = document.querySelector("#phone").value;
+    const email = document.querySelector("#email").value;
+    const occasion = document.querySelector("#occasion").value;
+    const cakeType = document.querySelector("#cakeType").value;
+    const size = document.querySelector("#size").value;
+    const date = document.querySelector("#date").value;
+    const budget = document.querySelector("#budget").value;
+    const message = document.querySelector("#message").value;
 
-        if (!videoSection) {
-            return;
-        }
+    const enquiry =
+        "Hello Ifybee's Cakes & Confectionery,%0A%0A" +
+        "I would like to make a custom cake enquiry.%0A%0A" +
+        "Name: " + name + "%0A" +
+        "Phone: " + phone + "%0A" +
+        "Email: " + email + "%0A" +
+        "Occasion: " + occasion + "%0A" +
+        "Cake Type: " + cakeType + "%0A" +
+        "Cake Size: " + size + "%0A" +
+        "Preferred Date: " + date + "%0A" +
+        "Budget: " + budget + "%0A%0A" +
+        "Design Details:%0A" +
+        message;
 
-        let message = videoSection.querySelector(".video-message");
+    const whatsappNumber = "2340000000000";
 
-        if (!message) {
+    whatsappLink.href =
+        "https://wa.me/" +
+        whatsappNumber +
+        "?text=" +
+        enquiry;
 
-            message = document.createElement("p");
+    customCakeForm.style.display = "none";
 
-            message.className = "video-message";
+    formSuccess.classList.add("active");
 
-            message.textContent =
-                "The Ifybee's custom cake video will be added here.";
-
-            message.style.marginTop = "15px";
-            message.style.color = "#d6b46a";
-
-            videoSection.querySelector(".video-content").appendChild(message);
-
-        }
-
+    formSuccess.scrollIntoView({
+        behavior: "smooth",
+        block: "center"
     });
+});
 
-}
 
+editEnquiry.addEventListener("click", function () {
 
-const customForm = document.querySelector(".custom-form");
+    formSuccess.classList.remove("active");
 
-if (customForm) {
+    customCakeForm.style.display = "block";
 
-    customForm.addEventListener("submit", (event) => {
-
-        event.preventDefault();
-
-        const formMessage = customForm.querySelector(".form-message");
-
-        if (!formMessage) {
-            return;
-        }
-
-        formMessage.textContent =
-            "Your request form is ready. Backend submission will be connected later.";
-
+    customCakeForm.scrollIntoView({
+        behavior: "smooth",
+        block: "start"
     });
-
-}
-
-
-const referenceImage = document.querySelector("#reference-image");
-
-if (referenceImage) {
-
-    referenceImage.addEventListener("change", () => {
-
-        const uploadArea = referenceImage.closest(".file-upload");
-
-        if (!uploadArea) {
-            return;
-        }
-
-        const text = uploadArea.querySelector("span");
-
-        if (!text) {
-            return;
-        }
-
-        if (referenceImage.files.length > 0) {
-
-            text.textContent =
-                referenceImage.files[0].name;
-
-        } else {
-
-            text.textContent =
-                "Choose an image for inspiration";
-
-        }
-
-    });
-
-}
-
-
-const shineElements = document.querySelectorAll(".image-shine");
-
-shineElements.forEach((element) => {
-
-    element.addEventListener("mouseenter", () => {
-        element.classList.add("shining");
-    });
-
-    element.addEventListener("mouseleave", () => {
-        element.classList.remove("shining");
-    });
-
 });

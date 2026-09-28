@@ -1,184 +1,60 @@
-/* =====================================================
-   IFYBEE'S EVENTS PAGE
-   JAVASCRIPT
-===================================================== */
-
-
-/* =====================================================
-   SIDE MENU
-===================================================== */
-
-const menuButton =
-    document.querySelector(".menu-button");
-
-const closeMenuButton =
-    document.querySelector(".close-menu");
-
-const menuOverlay =
-    document.querySelector(".menu-overlay");
-
-const sideMenu =
-    document.querySelector(".side-menu");
+const menuButton = document.querySelector(".menu-btn");
+const sideMenu = document.querySelector(".side-menu");
+const menuOverlay = document.querySelector(".menu-overlay");
+const menuLinks = document.querySelectorAll(".menu-links a");
 
 function openMenu() {
-
     document.body.classList.add("menu-open");
-    menuButton?.setAttribute("aria-expanded", "true");
-    sideMenu?.setAttribute("aria-hidden", "false");
-
+    sideMenu.setAttribute("aria-hidden", "false");
 }
 
 function closeMenu() {
-
     document.body.classList.remove("menu-open");
-    menuButton?.setAttribute("aria-expanded", "false");
-    sideMenu?.setAttribute("aria-hidden", "true");
-
+    sideMenu.setAttribute("aria-hidden", "true");
 }
 
-menuButton?.addEventListener("click", openMenu);
-closeMenuButton?.addEventListener("click", closeMenu);
-menuOverlay?.addEventListener("click", closeMenu);
+if (menuButton) {
+    menuButton.addEventListener("click", openMenu);
+}
 
-document.querySelectorAll(".side-menu a").forEach((link) => {
+if (menuOverlay) {
+    menuOverlay.addEventListener("click", closeMenu);
+}
+
+menuLinks.forEach(function (link) {
     link.addEventListener("click", closeMenu);
 });
 
-document.addEventListener("keydown", (event) => {
-    if (event.key === "Escape") {
-        closeMenu();
-    }
-});
 
+const eventForm = document.querySelector("#eventForm");
 
-/* =====================================================
-   SCROLL REVEAL
-===================================================== */
+if (eventForm) {
 
-const revealItems =
-    document.querySelectorAll(".reveal-item");
-
-if ("IntersectionObserver" in window) {
-
-    const revealObserver =
-        new IntersectionObserver(
-            (entries, observer) => {
-
-                entries.forEach((entry) => {
-
-                    if (entry.isIntersecting) {
-
-                        entry.target.classList.add("visible");
-                        observer.unobserve(entry.target);
-
-                    }
-
-                });
-
-            },
-            {
-                threshold: 0.12
-            }
-        );
-
-    revealItems.forEach((item) => {
-        revealObserver.observe(item);
-    });
-
-} else {
-
-    revealItems.forEach((item) => {
-        item.classList.add("visible");
-    });
-
-}
-
-
-/* =====================================================
-   HERO
-   Make sure hero text appears immediately
-   even if JavaScript loads slowly.
-===================================================== */
-
-const heroContent =
-    document.querySelector(".events-hero-content");
-
-
-if (heroContent) {
-
-    setTimeout(() => {
-
-        heroContent.classList.add("visible");
-
-    }, 150);
-
-}
-
-
-
-/* =====================================================
-   CINEMATIC PARALLAX
-===================================================== */
-
-const statementSection =
-    document.querySelector(".event-statement");
-
-const statementImage =
-    document.querySelector(".statement-image img");
-
-
-window.addEventListener("scroll", () => {
-
-    if (!statementSection || !statementImage) {
-        return;
-    }
-
-
-    const rect =
-        statementSection.getBoundingClientRect();
-
-
-    const windowHeight =
-        window.innerHeight;
-
-
-    if (
-        rect.top < windowHeight &&
-        rect.bottom > 0
-    ) {
-
-        const progress =
-            (windowHeight - rect.top) /
-            (windowHeight + rect.height);
-
-
-        const movement =
-            (progress - 0.5) * 35;
-
-
-        statementImage.style.transform =
-            `scale(1.08) translateY(${movement}px)`;
-
-    }
-
-});
-
-
-
-/* =====================================================
-   PREVENT EMPTY LINKS FROM JUMPING TO TOP
-===================================================== */
-
-const emptyLinks =
-    document.querySelectorAll('a[href="#"]');
-
-
-emptyLinks.forEach((link) => {
-
-    link.addEventListener("click", (event) => {
+    eventForm.addEventListener("submit", function (event) {
 
         event.preventDefault();
 
-    });
+        const eventName = document.querySelector("#eventName").value;
+        const eventType = document.querySelector("#eventType").value;
+        const eventDate = document.querySelector("#eventDate").value;
+        const guestNumber = document.querySelector("#guestNumber").value;
+        const eventMessage = document.querySelector("#eventMessage").value;
 
-});
+        const whatsappNumber = "2340000000000";
+
+        const message =
+            "Hello Ifybee's Cakes & Confectionery,%0A%0A" +
+            "My name is " + encodeURIComponent(eventName) + ".%0A" +
+            "I am planning a " + encodeURIComponent(eventType) + ".%0A" +
+            "Event date: " + encodeURIComponent(eventDate) + ".%0A" +
+            "Number of guests: " + encodeURIComponent(guestNumber) + ".%0A%0A" +
+            "Event details:%0A" +
+            encodeURIComponent(eventMessage);
+
+        const whatsappLink =
+            "https://wa.me/" + whatsappNumber + "?text=" + message;
+
+        window.open(whatsappLink, "_blank");
+
+    });
+}
